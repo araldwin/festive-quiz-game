@@ -2,19 +2,3 @@
 The game stylesheet.
 Used for the styling of the game page.
 */
-.modal {
-    text-align: center;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%; /* Adjust the width as needed */
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #228B22; /* Christmas green */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; /* Rounded corners */
-    font-family: 'Georgia', serif; /* Classic font */
-}
