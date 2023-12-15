@@ -2,3 +2,38 @@
 The game stylesheet.
 Used for the styling of the game page.
 */
+
+.game-image {
+    background-image: url(../media/pexels-george-dolgikh-1303098.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#navbar {
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: xx-large;
+} 
+
+#btn-sleigh:hover {
+    background-color: rgb(241, 21, 21);
+    border-color: gold;
+
+}
+.btn {
+    font-weight: bold;
+    border-width: 3px;
+    border-color: #12b103;
+}
+
+.btn:hover {
+    background-color: #0d6e04;
+    color: rgb(241, 21, 21);
+    border-color: gold;
+}
+
+#attempts {
+    font-weight: bold;
+}
+
