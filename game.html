@@ -21,7 +21,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="assets/css/game.css">
 
   <title>Festive Quiz - Game Board</title>
 </head>
@@ -41,12 +41,19 @@
         <span id="sound-wrapper">
           <!-- TODO: switch to mute icon when clicked using JS  -->
           <!-- <i class="fas fa-2x fa-volume-mute"></i> -->
-          <i class="fas fa-2x fa-volume-up"></i>
+            <i class="fas fa-2x fa-volume-up"></i>
         </span>
-        <span class="rules-wrapper">
-          <i class="fas fa-2x fa-question-circle"></i>
+        <span class="rules-wrapper" id="rulesButton">
+            <i class="fas fa-2x fa-question-circle"></i>
+            <div id="rulesModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Rules</h2>
+                    <p>Welcome to Santa's Quiz Adventure</p>
+                </div>
+            </div>
         </span>
-      </div>
+    </div>
     </div>
     <!-- ./Navbar -->
 
