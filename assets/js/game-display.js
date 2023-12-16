@@ -36,10 +36,17 @@ export function displayQuestion(randomQuestionObj) {
  * Display the number of attempts in the game, based on the difficulty level.
  */
 export function displayAttempts(attemptsNumber) {
-  for (let i = 0; i < attemptsNumber; i++) {
-    const attempt = document.createElement("i");
-    attempt.classList.add("fa-solid", "fa-cookie-bite", "fa-xl", "fa-beat");
-    attempt.style.color = "#af6d02";
-    document.getElementById("attempts").appendChild(attempt);
-  }
+  const attemptsWrapper= document.getElementById("attempts");
+  const attemptEl = `<i class="fa-solid fa-cookie-bite fa-xl fa-beat" style="color: #af6d02;"></i>`
+  attemptsWrapper.innerHTML = attemptEl.repeat(attemptsNumber);
+}
+
+
+/**
+ * Display the progress bar in the game.
+ */
+export function displayProgress(progress) {
+  const progressBar = document.querySelector(".progress-bar");
+  progressBar.style.width = `${progress}%`;
+  progressBar.setAttribute("aria-valuenow", progress);
 }

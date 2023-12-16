@@ -14,7 +14,7 @@ Used for the styling of the game page.
     padding-left: 15%;
     padding-right: 15%;
     font-size: xx-large;
-} 
+}
 
 #btn-sleigh:hover {
     background-color: rgb(241, 21, 21);
@@ -37,3 +37,16 @@ Used for the styling of the game page.
     font-weight: bold;
 }
 
+
+.correct-answer:disabled {
+    /* TODO: style the correct answer button */
+    background-color: #0d6e04;
+    color: rgb(241, 21, 21);
+    border-color: gold;
+}
+
+.wrong-answer:disabled {
+    /* TODO: style the wrong answer button */
+    background-color: rgb(241, 21, 21);
+    border-color: gold;
+}
