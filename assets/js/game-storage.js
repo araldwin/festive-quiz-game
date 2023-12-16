@@ -41,7 +41,7 @@ export function setDifficulty(difficulty) {
  * Set the number of attempts in local storage.
  * @param {number} attempts
  */
-function setAttempts(attempts) {
+export function setAttempts(attempts) {
   localStorage.setItem("attempts", attempts);
 }
 
@@ -50,8 +50,7 @@ function setAttempts(attempts) {
  * @returns {number} - The number of attempts. E.g: 3, 2, 1.
  */
 export function getAttempts() {
-  const difficulty = JSON.parse(localStorage.getItem("difficulty"));
-  const attempts = difficulty[Object.keys(difficulty)[0]];
+  const attempts = localStorage.getItem("attempts");
 
   return attempts;
 }
