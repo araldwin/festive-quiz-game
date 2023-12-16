@@ -13,7 +13,11 @@ import {
   getProgress,
   setProgress,
 } from "./game-storage.js";
-import { displayAttempts, displayQuestion, displayProgress } from "./game-display.js";
+import {
+  displayAttempts,
+  displayQuestion,
+  displayProgress,
+} from "./game-display.js";
 
 runGame();
 
@@ -25,6 +29,11 @@ function runGame() {
   attachEventListeners();
 }
 
+/**
+ * Check if the answer is correct or wrong.
+ * @param {string} answer - The answer that was clicked.
+ * @param {object} answerButton - The answer button that was clicked.
+ */
 function checkAnswer(answer, answerButton) {
   const currentQuestion = getCurrentQuestion();
   const correctAnswer = currentQuestion.correctAnswer;
@@ -47,11 +56,19 @@ function checkAnswer(answer, answerButton) {
   } else {
     // Wrong answer
     markAnswerWrong(answerButton);
+
+    const attempts = getAttempts() - 1;
     // Remove an attempt
-    setAttempts(getAttempts() - 1);
-    // Run the game again
+    setAttempts(attempts);
+    displayAttempts(attempts);
+
     setTimeout(() => {
-      runGame();
+      if (attempts < 1) {
+        endGame();
+        return;
+      } else {
+        runGame();
+      }
     }, 2000);
   }
 }
@@ -69,7 +86,6 @@ function attachEventListeners() {
   });
 }
 
-
 /**
  * Update the progress bar in local storage.
  * @returns {number} - The updated progress bar value.
@@ -82,10 +98,9 @@ function updateProgress() {
   return updatedProgress;
 }
 
-
 /**
-* Mark an answer as correct
-*/
+ * Mark an answer as correct
+ */
 function markAnswerCorrect(answerButton) {
   // disasble all the answer buttons
   const answerButtons = document.querySelectorAll(".answer");
@@ -97,8 +112,8 @@ function markAnswerCorrect(answerButton) {
 }
 
 /**
-* Mark an answer as wrong
-*/
+ * Mark an answer as wrong
+ */
 function markAnswerWrong(answerButton) {
   // disasble all the answer buttons
   const answerButtons = document.querySelectorAll(".answer");
@@ -107,4 +122,15 @@ function markAnswerWrong(answerButton) {
   });
   // Mark the answer as wrong
   answerButton.classList.add("wrong-answer");
+}
+
+/**
+ * End the game
+ * Display the game over modal and reset progress
+ */
+function endGame() {
+  // TODO: Display the game over modal
+  // const gameOverModal = document.getElementById("gameOverModal");
+  alert("Game Over");
+  setProgress(0);
 }
