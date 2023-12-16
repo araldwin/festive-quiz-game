@@ -9,6 +9,7 @@ import {
   getAttempts,
   setAttempts,
   getCurrentTopicObj,
+  getRandomQuestion,
   setCurrentQuestion,
   getCurrentQuestion,
   getProgress,
@@ -24,9 +25,9 @@ import {
 runGame();
 
 function runGame() {
-  displayAttempts(getAttempts());
   displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
+  displayAttempts(getAttempts());
   displayProgress(getProgress());
 
   attachEventListeners();
@@ -42,7 +43,7 @@ function checkAnswer(answer, answerButton) {
   const correctAnswer = currentQuestion.correctAnswer;
 
   // Update the current question in local storage
-  setCurrentQuestion();
+  setCurrentQuestion(getRandomQuestion());
 
   if (answer === correctAnswer) {
     // Correct answer
@@ -95,7 +96,7 @@ function attachEventListeners() {
  */
 function updateProgress() {
   const currentProgress = getProgress();
-  const updatedProgress = currentProgress + 10;
+  const updatedProgress = currentProgress + 20;
   setProgress(updatedProgress);
 
   return updatedProgress;
