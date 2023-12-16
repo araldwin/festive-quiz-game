@@ -6,7 +6,7 @@ This script is used for the game page.
 import {
   setDifficulty,
   getAvailableTopics,
-  setCurrentTopic,
+  setCurrentTopicByName,
 } from "./game-storage.js";
 import { displayAvailableTopics } from "./game-display.js";
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   topicButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const topicName = button.dataset.topic;
-      setCurrentTopic(topicName);
+      setCurrentTopicByName(topicName);
       // Redirect to the game page
       window.location.href = "game.html";
     });

@@ -51,8 +51,18 @@ export function getAvailableTopics() {
  * @param {string} topic - The topic name.
  * E.g: {topic: "Christmas Trivia", questions: [{question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}]}
  */
-export function setCurrentTopic(topicName) {
+export function setCurrentTopicByName(topicName) {
   const topicObj = DATA.find((topic) => topic.topic === topicName);
+  localStorage.setItem("currentTopic", JSON.stringify(topicObj));
+}
+
+
+/**
+ * Set the current topic in local storage.
+ * @param {object} topicObj - The topic object.
+ * E.g: {topic: "Christmas Trivia", questions: [{question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}]}
+ */
+export function setCurrentTopic(topicObj) {
   localStorage.setItem("currentTopic", JSON.stringify(topicObj));
 }
 
