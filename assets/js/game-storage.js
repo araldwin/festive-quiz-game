@@ -5,7 +5,6 @@ Used to store and retrieve data from local storage.
 
 import { getRandomQuestion } from "./random-object.js";
 
-
 /**
  * Set the difficulty in local storage.
  * E.g: difficulty: {"easy": 3}
@@ -36,7 +35,6 @@ export function setDifficulty(difficulty) {
   setAttempts(attempts);
 }
 
-
 /**
  * Set the number of attempts in local storage.
  * @param {number} attempts
@@ -55,7 +53,6 @@ export function getAttempts() {
   return attempts;
 }
 
-
 /**
  * Set the current question to local storage.
  */
@@ -64,7 +61,6 @@ export function setCurrentQuestion() {
   localStorage.setItem("currentQuestion", JSON.stringify(data));
 }
 
-
 /**
  * Get the current question from local storage.
  * @returns {object} - A random question object with the topic name, question, answers and correct answer.
@@ -72,4 +68,20 @@ export function setCurrentQuestion() {
  */
 export function getCurrentQuestion() {
   return JSON.parse(localStorage.getItem("currentQuestion"));
+}
+
+/**
+ * Set the progress bar in local storage.
+ * @param {number} progress - The progress bar value.
+ */
+export function setProgress(progress) {
+  localStorage.setItem("progress", progress);
+}
+
+/**
+ * Get the progress bar value from local storage.
+ * @returns {number} - The progress bar value.
+ */
+export function getProgress() {
+  return Number(localStorage.getItem("progress"));
 }

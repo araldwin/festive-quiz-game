@@ -40,3 +40,13 @@ export function displayAttempts(attemptsNumber) {
   const attemptEl = `<i class="fa-solid fa-cookie-bite fa-xl fa-beat" style="color: #af6d02;"></i>`
   attemptsWrapper.innerHTML = attemptEl.repeat(attemptsNumber);
 }
+
+
+/**
+ * Display the progress bar in the game.
+ */
+export function displayProgress(progress) {
+  const progressBar = document.querySelector(".progress-bar");
+  progressBar.style.width = `${progress}%`;
+  progressBar.setAttribute("aria-valuenow", progress);
+}
