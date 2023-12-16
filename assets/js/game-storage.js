@@ -3,6 +3,7 @@ The game storage script.
 Used to store and retrieve data from local storage.
 */
 
+
 /**
  * Set the difficulty in local storage.
  * E.g: difficulty: {"easy": 3}
@@ -29,9 +30,18 @@ export function setDifficulty(difficulty) {
       [difficulty]: attempts,
     })
   );
-  window.location.href = "game.html";
+
+  setAttempts(attempts);
 }
 
+
+/**
+ * Set the number of attempts in local storage.
+ * @param {number} attempts
+ */
+function setAttempts(attempts) {
+  localStorage.setItem("attempts", attempts);
+}
 
 /**
  * Get the number of attempts from local storage.
