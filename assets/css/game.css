@@ -19,6 +19,7 @@ Used for the styling of the game page.
 #btn-back {
     height: 40px;
     width: 80px;
+    border-style: none;
 }
 
 #btn-back:hover {
