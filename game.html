@@ -32,9 +32,9 @@
     <!-- Navbar -->
     <div id="navbar" class="row ">
       <div class="col-4 px-4">
-        <div class=" btn btn-lg btn-outline-secondary rounded-0" id="btn-sleigh">
+        <div class="btn btn-md btn-outline-secondary rounded-0" id="btn-back">
           <a href="index.html">
-            <i class="fa-solid fa-sleigh fa-2xl" style="color: #0d6e04;"></i>
+            <i class="fa-solid fa-circle-arrow-left fa-2xl" style="color: #17bf07;"></i>
           </a>
         </div>
       </div>
@@ -43,10 +43,10 @@
         <span id="sound-wrapper">
           <!-- TODO: switch to mute icon when clicked using JS  -->
           <!-- <i class="fas fa-2x fa-volume-mute"></i> -->
-          <i class="fas fa-l fa-volume-up" style="color: #0d6e04;"></i>
+          <i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>
         </span>
         <span class="rules-wrapper px-2" id="rulesButton">
-          <i class="fas fa-l fa-question-circle" style="color: #0d6e04;"></i>
+          <i class="fas fa-l fa-question-circle" style="color: #17bf07;"></i>
           <div id="rulesModal" class="modal">
             <div class="modal-content">
               <span class="close" onclick="closeModal()">&times;</span>
@@ -60,7 +60,7 @@
     <!-- ./Navbar -->
 
     <!-- Game Board Container -->
-    <div class="my-5">
+    <div class="my-2">
 
       <!-- Question -->
       <div class="row">
@@ -91,19 +91,29 @@
       <!-- ./Attempts -->
 
       <!-- Progress Bar -->
-      <div class="row mt-5">
-        <div class="col">
+      <div class="row mt-2">
+        <div class="col-10">
           <!-- To update bar use class="progress-bar". Update the aria-valuenow and style="width: "-->
-          <div class="progress" style="height: 25px;">
-            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="progress" style="height: 35px;">
+            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+              style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+            <span id="sleigh">
+              <i class="fa-solid fa-sleigh fa-2xl" style="color: #fc0717f7;"></i>
+            </span>
           </div>
+        </div>  
+        <div id="gifts" class="col-2">
+          <i class="fa-solid fa-gifts fa-2xl" style="color: #f80707f7;"></i>
         </div>
-        </div>
+        
+        
       </div>
-      <!-- ./Progress Bar -->
     </div>
+    <!-- ./Progress Bar -->
+  </div>
 
-    <!-- ./Game Board Container -->
+  <!-- ./Game Board Container -->
   </div>
 
   <!-- Audio -->

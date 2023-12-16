@@ -16,13 +16,21 @@ Used for the styling of the game page.
     font-size: xx-large;
 }
 
-#btn-sleigh:hover {
+#btn-back {
+    height: 40px;
+    width: 80px;
+}
+
+#btn-back:hover {
     background-color: rgb(241, 21, 21);
     border-color: gold;
 
 }
 .btn {
-    font-weight: bold;
+    width: 200px;
+    height: 80px;
+    font-weight: 500;
+    color: rgba(62, 49, 49, 0.865);
     border-width: 3px;
     border-color: #12b103;
 }
@@ -35,8 +43,13 @@ Used for the styling of the game page.
 
 #attempts {
     font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+.progress {
+    margin-left: 25%;
+}
 
 .correct-answer:disabled {
     /* TODO: style the correct answer button */
@@ -49,4 +62,28 @@ Used for the styling of the game page.
     /* TODO: style the wrong answer button */
     background-color: rgb(241, 21, 21);
     border-color: gold;
+}
+
+#topic {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#question {
+    font-size: x-large;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#sleigh {
+    margin-top: 8px;
+    font-size: medium;
+    padding-left: 5px;
+}
+#gifts {
+    font-size: large;
+    background-color: #0d6e04;
+    width: 68px;
+    height: 40px;
+    padding-top: 5px;
 }
