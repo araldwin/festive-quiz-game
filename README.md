@@ -61,6 +61,40 @@ Festive Quiz Game is an interactive website that caters to users who enjoy learn
 The purpose of the website is to provide users with a way to take a break from their daily routine. The quiz on the website is an ideal way for users to unwind, relax, and refresh their minds during the holiday season. It offers users a chance to test their knowledge of Christmas traditions, history, and pop culture in a fun, interactive, and enjoyable way.
 
 
-### Target audience
+## Objectives
+
+
+  - The main goal of the player is to assist Santa in delivering gifts to children from the North Pole by answering Christmas-related questions. For every correct answer, Santa moves closer to his final destination. The quiz consists of three levels of difficulty - Easy, Medium, and Hard. Each level has a different number of attempts, and the user will experience a unique end animation when they successfully complete each level.
+
+
+
+
+
+
+## Target audience
+
+
+## Initial Concept
+
+### Wireframes
+
+  - The design of the website was a collaborative effort from the team assigned to build  it. Different ideas were suggested on where each content should be placed on the page. As a result, the team decided to have different designs, which may have subtle changes as the building progresses.
+
+  Below are some images of the wireframes:
+
+  - Homepage wireframe
+  <img src="assets/readme.docs/homepage-flashdrag.png" width="600" alt="image of hompage wireframe idea">
+
+  - Game area wireframe option 1.
+  <img src="assets/readme.docs/Option 1.png" width="600" alt="image of game area option 1 wireframe idea">
+
+
+  - Game area wireframe option 2.
+  <img src="assets/readme.docs/Option 2.png" width="600" alt="image of game area option 2 wireframe idea">
+
+  
+***
+
+
 
 
