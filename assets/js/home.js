@@ -10,8 +10,18 @@ import {
 } from "./game-storage.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Set the difficulty level when the play button is clicked.
-  const playButton = document.getElementById("play-btn");
+  // Get the difficulty buttons
+  const difficultyButtons = document.querySelectorAll(".difficulty-btn");
+
+  // Set the difficulty level in local storage when a button is clicked
+  difficultyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const difficulty = button.dataset.difficulty;
+      setDifficulty(difficulty);
+    });
+  });
+
+
   playButton.addEventListener("click", () => {
     const difficulty = playButton.dataset.difficulty;
 
