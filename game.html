@@ -65,21 +65,15 @@
       <!-- Question -->
       <div class="row">
         <div class="col">
+          <h1 id="topic" class="text-center">Topic</h1>
           <h2 id="question" class="text-center">What is the answer to this question?</h2>
         </div>
       </div>
       <!-- ./Question -->
 
       <!-- Answers -->
-      <div class="row text-center py-3">
-        <div class="col-12">
-          <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" data-answer="1">Answer 1</button>
-          <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" data-answer="2">Answer 2</button>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" data-answer="3">Answer 3</button>
-          <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" data-answer="4">Answer 4</button>
-        </div>
+      <div id="answers" class="row text-center py-3">
+        <!-- Use JS to add the answer buttons here -->
       </div>
       <!-- ./Answers -->
 
@@ -88,13 +82,7 @@
         <div class="col">
           <h3 id="attempts" class="text-center">
             Attempts:
-            <!-- TODO: Use JS to update the number of attempts with id="attemts-number" -->
-            <span id="attemts-number">
-              <!-- TODO: change to deer icon -->
-              <i class="fa-solid fa-cookie-bite fa-xl fa-beat" style="color: #af6d02;"></i>
-              <i class="fa-solid fa-cookie-bite fa-xl fa-beat" style="color: #af6d02;"></i>
-              <i class="fa-solid fa-cookie-bite fa-xl fa-beat" style="color: #af6d02;"></i>
-            </span>
+            <!-- Use JS to update the number of attempts with id="attemts" -->
           </h3>
         </div>
       </div>
@@ -135,7 +123,10 @@
   <!-- Custom JS -->
   <script src="assets/js/script.js"></script>
   <script type="module" src="assets/js/db.js"></script>
-  <script src="assets/js/game.js"></script>
+  <script type="module" src="assets/js/game-storage.js"></script>
+  <script type="module" src="assets/js/random-object.js"></script>
+  <script type="module" src="assets/js/game-display.js"></script>
+  <script type="module" src="assets/js/game.js"></script>
 </body>
 
 </html>
