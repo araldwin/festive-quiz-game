@@ -31,3 +31,17 @@ window.addEventListener("click", (event) => {
     closeModal();
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const soundWrapper = document.getElementById("sound-wrapper");
+  const music = document.getElementById("background-music");
+
+  soundWrapper.addEventListener("click", function () {
+    // Toggle between play and pause when the sound icon is clicked
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  });
+});
