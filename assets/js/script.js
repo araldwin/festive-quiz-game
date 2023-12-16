@@ -2,7 +2,7 @@
 The general script for the all the pages.
 Used init bootstrap tooltips, popovers and modals throughout the site.
 */
-import { setDifficulty } from "./game-storage.js";
+import { setDifficulty, setCurrentQuestion } from "./game-storage.js";
 
 // Set the difficulty level when the play button is clicked.
 const playButton = document.getElementById("play-btn");
@@ -10,9 +10,9 @@ playButton.addEventListener("click", () => {
   const difficulty = playButton.dataset.difficulty;
 
   setDifficulty(difficulty);
+  setCurrentQuestion();
   window.location.href = "game.html";
 });
-
 
 const rulesButton = document.getElementById("rulesButton");
 const rulesModal = document.getElementById("rulesModal");

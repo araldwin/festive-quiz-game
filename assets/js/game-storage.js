@@ -3,6 +3,8 @@ The game storage script.
 Used to store and retrieve data from local storage.
 */
 
+import { getRandomQuestion } from "./random-object.js";
+
 
 /**
  * Set the difficulty in local storage.
@@ -52,4 +54,23 @@ export function getAttempts() {
   const attempts = difficulty[Object.keys(difficulty)[0]];
 
   return attempts;
+}
+
+
+/**
+ * Set the current question to local storage.
+ */
+export function setCurrentQuestion() {
+  const data = getRandomQuestion();
+  localStorage.setItem("currentQuestion", JSON.stringify(data));
+}
+
+
+/**
+ * Get the current question from local storage.
+ * @returns {object} - A random question object with the topic name, question, answers and correct answer.
+ * E.g: {topic: "Christmas Trivia", question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
+ */
+export function getCurrentQuestion() {
+  return JSON.parse(localStorage.getItem("currentQuestion"));
 }
