@@ -5,9 +5,10 @@ This script is used for the game page.
 
 import {
   setDifficulty,
-  setCurrentQuestion,
-  setProgress,
+  getAvailableTopics,
+  setCurrentTopic,
 } from "./game-storage.js";
+import { displayAvailableTopics } from "./game-display.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get the difficulty buttons
@@ -21,13 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  displayAvailableTopics(getAvailableTopics());
 
-  playButton.addEventListener("click", () => {
-    const difficulty = playButton.dataset.difficulty;
+  // Get the topic buttons
+  const topicButtons = document.querySelectorAll(".topicBtn");
 
-    setDifficulty(difficulty);
-    setCurrentQuestion();
-    setProgress(0);
-    window.location.href = "game.html";
+  // Set the topic in local storage when a button is clicked
+  topicButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const topicName = button.dataset.topic;
+      setCurrentTopic(topicName);
+      // Redirect to the game page
+      window.location.href = "game.html";
+    });
   });
+
 });

@@ -4,10 +4,28 @@ This module contains functions to display the game.
 
 
 /**
+ * Display the available topics in the game.
+ * @param {array} availableTopics - An array of all the available topics represented as strings.
+ */
+export function displayAvailableTopics(availableTopics) {
+  const topicList = document.getElementById("topic-list");
+  let topicListHTML = "";
+  console.log(availableTopics);
+  availableTopics.forEach((topicName) => {
+    topicListHTML += `
+      <button class="btn btn-success w-75 my-1 topicBtn" data-topic="${topicName}">
+        ${topicName}
+      </button>
+    `;
+  });
+
+  topicList.innerHTML = topicListHTML;
+}
+
+/**
  * Display topic, question and answers in the game.
  * @param {*} randomQuestionObj
  */
-
 export function displayQuestion(randomQuestionObj) {
   const topic = document.getElementById("topic");
   const question = document.getElementById("question");
