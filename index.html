@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,112 +26,103 @@
   <title>Festive Quiz Game</title>
 </head>
 
-<body>
-
-  <div class="container position-relative">
-    <!-- Navbar -->
-        <div class="col text-end p-3">
-          <span id="sound-wrapper">
-            <!-- TODO: switch to mute icon when clicked using JS  -->
-            <!-- <i class="fas fa-2x fa-volume-mute"></i> -->
-            <i class="fas fa-2x fa-volume-up"></i>
-          </span>
-          <span class="rules-wrapper">
-            <i class="fas fa-2x fa-question-circle"></i>
-          </span>
-        </div>
-      </div>
-      <!-- ./Navbar -->
-
-    <!-- background video -->
-    <div>
-      <!-- <video autoplay loop muted plays-inline class="back-video">
-          <source src="./assets/images/festive quiz game bg.mp4">
-        </video> -->
-    </div>
-
-      <!-- Game-board link  -->
-    <a href="game.html">Game Board</a>
+	<body>
+		<!-- background video -->
+		<video autoplay loop muted playsinline class="background-video">
+			<source src="./assets/images/festive quiz game bg.mp4" />
+		</video>
 
 
-        <h1 class="text-center">FESTIVE QUIZ GAME</h1>
+		<div class="home">
+			<nav>
+				<a href="game.html"></a>
+				<ul>
+					<span id="sound-wrapper">
+						<!-- TODO: switch to mute icon when clicked using JS  -->
+						<!-- <i class="fas fa-2x fa-volume-mute"></i> -->
+						<i class="fas fa-2x fa-volume-up"></i>
+					</span>
+					<span class="rules-wrapper">
+						<i class="fas fa-2x fa-question-circle"></i>
+					</span>
+				</ul>
+			</nav>
+			<div class="content">
+				<h1>FESTIVE QUIZ GAME</h1>
+				<a href="game.html">
+					<button class="btn btn-primary">Play</button>
+				</a>
+			<div>		
+		</div>
 
-
-    <div class="position-absolute top-50 start-50 translate-middle">
-      <button>Play</button>
-      <!-- Trigger the modal with a button -->
-      <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
-    </div>
-    <div class="position-absolute top-50 start-50 translate-middle">
-      <button id="play-btn" data-difficulty="easy">Play</button>
-      <!-- Trigger the modal with a button -->
-      <button type="button" data-bs-toggle="modal" data-bs-target="#myModal">Open Modal</button>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Instructions</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Play</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container fixed-bottom p-5">
-      <div class="row">
-        <div class="col">
-          <div class="wrapper">
-            <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-          </div>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/2.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-        <div class="col">
-          <a href="#">
-              <img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-            </a>
-        </div>
-      </div>
-    </div>
- </div>
-
-
-
+		<div class="container fixed-bottom p-5">
+			<div class="row">
+				<div class="col">
+					<div class="wrapper">
+						<a href="#">
+							<img
+								src="./assets/images/1.png"
+								alt=""
+								class="img-fluid"
+							/>
+						</a>
+					</div>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/1.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/1.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/2.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/1.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/1.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+				<div class="col">
+					<a href="#">
+						<img
+							src="./assets/images/1.png"
+							alt=""
+							class="img-fluid"
+						/>
+					</a>
+				</div>
+			</div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -145,6 +135,5 @@
   <script type="module" src="assets/js/game-storage.js"></script>
   <script type="module" src="assets/js/home.js"></script>
   <script src="assets/js/script.js"></script>
-</body>
-
+	</body>
 </html>
