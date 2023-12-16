@@ -8,6 +8,7 @@ It also contains the functions that control the game play.
 import {
   getAttempts,
   setAttempts,
+  getCurrentTopicObj,
   setCurrentQuestion,
   getCurrentQuestion,
   getProgress,
@@ -16,6 +17,7 @@ import {
 import {
   displayAttempts,
   displayQuestion,
+  displayCurrentTopic,
   displayProgress,
 } from "./game-display.js";
 
@@ -23,6 +25,7 @@ runGame();
 
 function runGame() {
   displayAttempts(getAttempts());
+  displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
   displayProgress(getProgress());
 

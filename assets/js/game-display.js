@@ -22,22 +22,31 @@ export function displayAvailableTopics(availableTopics) {
   topicList.innerHTML = topicListHTML;
 }
 
+
+/**
+ * Display the current topic in the game.
+ * @param {string} topicName - The current topic name.
+ */
+export function displayCurrentTopic(topicName) {
+  const topic = document.getElementById("topic");
+  topic.textContent = topicName;
+}
+
 /**
  * Display topic, question and answers in the game.
- * @param {*} randomQuestionObj
+ * @param {*} questionObj
+ * E.g: {question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
  */
-export function displayQuestion(randomQuestionObj) {
-  const topic = document.getElementById("topic");
+export function displayQuestion(questionObj) {
   const question = document.getElementById("question");
   const answers = document.getElementById("answers");
 
-  const answer1 = randomQuestionObj.answers[0];
-  const answer2 = randomQuestionObj.answers[1];
-  const answer3 = randomQuestionObj.answers[2];
-  const answer4 = randomQuestionObj.answers[3];
+  const answer1 = questionObj.answers[0];
+  const answer2 = questionObj.answers[1];
+  const answer3 = questionObj.answers[2];
+  const answer4 = questionObj.answers[3];
 
-  topic.textContent = randomQuestionObj.topic;
-  question.textContent = randomQuestionObj.question;
+  question.textContent = questionObj.question;
   answers.innerHTML = `
     <div class="col-12">
       <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer1}</button>

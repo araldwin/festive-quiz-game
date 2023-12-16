@@ -62,7 +62,7 @@ export function setCurrentTopic(topicName) {
  */
 export function getCurrentTopicObj() {
   const currentTopic = localStorage.getItem("currentTopic");
-  return currentTopic;
+  return JSON.parse(currentTopic);
 }
 
 
@@ -87,6 +87,7 @@ export function getAttempts() {
 
 /**
  * Get a random question from a current topic object that is stored in local storage.
+ * Remove the selected question from the array of questions in the current topic object.
  * @returns {object} - An object with random question, answers and correct answer.
  * E.g: {question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
  */
@@ -116,11 +117,17 @@ export function setCurrentQuestion(randomQuestion) {
 
 /**
  * Get the current question from local storage.
- * @returns {object} - A random question object with the topic name, question, answers and correct answer.
- * E.g: {topic: "Christmas Trivia", question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
+ * If there is no current question in local storage, get a random question and set it in local storage.
+ * @returns {object} - An object with question, answers and correct answer.
+ * E.g: {question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
  */
 export function getCurrentQuestion() {
-  return JSON.parse(localStorage.getItem("currentQuestion"));
+  let currentQuestion = JSON.parse(localStorage.getItem("currentQuestion"));
+  if (!currentQuestion) {
+    currentQuestion = getRandomQuestion();
+    setCurrentQuestion(currentQuestion);
+  }
+  return currentQuestion;
 }
 
 
