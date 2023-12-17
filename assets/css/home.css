@@ -7,10 +7,9 @@ Used for the styling of the home page.
 body {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
-	overflow: hidden;
-	/* Prevent scrolling if the video overflows */
-	overflow: hidden;
+	height: 60vh;
+	overflow: hidden; /* Prevent scrolling if the video overflows */
+	overflow:hidden;
 }
 
 
@@ -26,6 +25,7 @@ body {
 
 /* hero section style */
 .home {
+
 	width: 100vw;
 	height: 100vh;
 	background: url(/assets/images/santa-background-optimized.jpg) no-repeat center center/cover;
@@ -93,6 +93,211 @@ nav ul {
 	border-color: #83929C;
 	border-width: 3px;
 	font-size: larger;
+}
+
+/* our team section style */
+
+.title h4 {
+	font-size: 50px;
+	letter-spacing: 1.2px;
+	word-spacing: 5px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15px);
+	word-wrap: break-word;
+	position: relative;
+	overflow: hidden;
+	background-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+	background-size: 400%;
+	animation: gradientAnimation 15s ease infinite;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation for gradient change */
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#wrapper .card_Container {
+	margin: 40px 0;
+}
+
+.card_Container .card {
+	position: relative;
+	width: 250px;
+	height: 380px;
+	margin: 20px;
+	overflow: hidden;
+	/* box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
+		inset 0 0 0 1000px rgba(67, 52, 109, 0.6); */
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card .img-box {
+	width: 250px;
+	height: 380px;
+	position: relative;
+	overflow: hidden;
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	transition: 500ms ease;
+	box-shadow: 0 10px 30px #000000cc;
+	border: 1px solid #fff;
+	cursor: pointer;
+}
+
+.Img {
+	width: 250px;
+	height: 290px;
+	background-size: cover;
+	background-position: center;
+	pointer-events: none;
+	transform: translate3d(0px, 0px, 0px) scale(1);
+	transition: 500ms ease;
+	transform-origin: bottom;
+	z-index: 10;
+	opacity: 1;
+}
+
+.card .Content {
+	position: absolute;
+	bottom: -160px;
+	width: 100%;
+	height: 160px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	backdrop-filter: blur(15px);
+	box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	transition: bottom 0.5s;
+	transition-delay: 0.65s;
+}
+
+.card:hover .Content {
+	bottom: 0;
+	transition-delay: 0s;
+}
+
+.img-box:hover {
+	box-shadow: 0px 50px 50px #000000cc;
+	transform: translate3d(0px, 0px, 50px) rotate3d(1, 0, 0, 55deg);
+	filter: brightness(30%);
+}
+.img-box:hover ~ .img {
+	transform: translate3d(0px, -50px, 50px) scale(1.2);
+	opacity: 1;
+}
+
+.Content .content-box h3 {
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 2px;
+	font-weight: 500;
+	font-size: 18px;
+	text-align: center;
+	margin: 20px 0 15px;
+	line-height: 1.1em;
+	transition: 0.5s;
+	transition-delay: 0.6s;
+	opacity: 0;
+	transform: translateY(-20px);
+}
+
+.card:hover .Content .content-box h3 {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.Content .content-box h3 span {
+	font-size: 12px;
+	font-weight: 300;
+	text-transform: initial;
+}
+
+.Content .icon {
+	position: relative;
+	bottom: 10px;
+	display: flex;
+}
+
+.Content .icon li {
+	list-style: none;
+	margin: 0 10px;
+	transform: translateY(40px);
+	transition: 0.5s;
+	opacity: 0;
+	transition-delay: calc(0.2s * var(--i));
+}
+
+.card:hover .Content .icon li {
+	transform: translateY(0);
+	opacity: 1;
+}
+
+.Content .icon li a {
+	color: #fff;
+	font-size: 24px;
+}
+.icon {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.icon li {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.icon li a {
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color: #333;
+	transition: background-color 0.3s ease;
+}
+
+.icon li a:hover {
+	color: #ddd;
+}
+
+/* animation */
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00,
+			inset 0 0 10px #00ff00, inset 0 0 20px #00ff00, inset 0 0 30px #00ff00;
+	}
+	50% {
+		box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 60px #00ff00,
+			inset 0 0 20px #00ff00, inset 0 0 40px #00ff00, inset 0 0 60px #00ff00;
+	}
+	100% {
+		box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00,
+			inset 0 0 10px #00ff00, inset 0 0 20px #00ff00, inset 0 0 30px #00ff00;
+	}
 }
 
 /* Media queries for responsiveness */
