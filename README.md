@@ -68,10 +68,13 @@ The purpose of the website is to provide users with a way to take a break from t
 
 
 
-
-
-
 ## Target audience
+
+  The Festive Quiz Game is designed and targeted for users who want to refresh their minds and get into the Christmas spirit. Whether they are on the go or have some free time, this game is a great way to unwind from their usual busy routine and enjoy the holiday season. It's perfect for those who want to take a break and have some fun while celebrating Christmas and its traditions.
+
+  It is designed for everyone who loves to celebrate Christmas and its traditions, the game is made available and accessible at users' fingertips, wherever they go. It helps users have the feeling that it’s time to get into the Christmas spirit and have some fun!
+
+  By carefully considering the needs of the users for Christmas, the team crafted the website that boasts a visually striking design, sure to captivate and entice visitors to keep having fun interacting with the website.
 
 
 ## Initial Concept
@@ -181,7 +184,7 @@ These colors are all reflected in the background image.
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | was used to build the structure of the website.
 
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) | was used to add style thw website.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) | was used to add style the website.
 
 - [JavaScript](https://pythontutor.com/javascript.html#mode=edit) | was used to add dynamism and interactivity to the website.
 
@@ -221,6 +224,16 @@ These colors are all reflected in the background image.
 ## Testing
 
 ### Validator Testing
+
+
+
+## Manual testing
+
+
+
+## Deployment
+
+  ### Github Pages
 
 
 
