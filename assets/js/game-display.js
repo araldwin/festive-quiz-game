@@ -72,7 +72,7 @@ export function displayQuestionCount(questionCount) {
  */
 export function displayAttempts(attemptsNumber) {
   const attemptsWrapper= document.getElementById("attempts");
-  const attemptEl = `<i class="fa-solid fa-cookie fa-beat fa-lg" style="color: #ff781f;"></i>`
+  const attemptEl = `<i class="fa-solid fa-cookie fa-beat fa-lg" style="color: #ff781f;"></i>`;
   attemptsWrapper.innerHTML = attemptEl.repeat(attemptsNumber);
 }
 

@@ -32,7 +32,7 @@ runGame();
 function runGame() {
   if (getCurrentTopicObj() === null || getCurrentQuestion() === null || getAttempts() === null) {
     // Redirect to the home page
-    window.location.href = "index.html"
+    window.location.href = "index.html";
     return;
   }
 
