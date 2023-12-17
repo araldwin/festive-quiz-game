@@ -36,35 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const music = document.getElementById("background-music");
   const soundWrapper = document.getElementById("sound-wrapper");
 
-  if (localStorage.getItem("sound") !== null) {
-    // If the sound is set to off, pause the music
-    let soundStatus = localStorage.getItem("sound");
-    if (soundStatus === "off") {
-      music.pause();
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
-    } else {
-      music.play();
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
-    }
-  } else {
-    // If the sound is not set, set it to off
-    localStorage.setItem("sound", "off");
-    music.pause();
-    soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
-  }
+  soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
 
   soundWrapper.addEventListener("click", function () {
     // Toggle between play and pause when the sound icon is clicked
     if (music.paused) {
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
-      music.play();
-      // Set the sound to on in local storage
-      localStorage.setItem("sound", "on");
-    } else {
       soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
+      music.play();
+    } else {
+      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
       music.pause();
-      // Set the sound to off in local storage
-      localStorage.setItem("sound", "off");
     }
   });
   // ./Sound
