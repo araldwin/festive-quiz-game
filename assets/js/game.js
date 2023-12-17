@@ -22,11 +22,13 @@ import {
   displayCurrentTopic,
   displayProgress,
   displayFireworks,
+  displayWinGameModal,
 } from "./game-display.js";
 
 runGame();
 
 function runGame() {
+  displayWinGameModal();
   displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
   displayQuestionCount(getCurrentTopicObj().questions.length);
@@ -158,6 +160,7 @@ function endGame() {
  * Display the win modal and reset progress
  */
 function winGame() {
-  displayFireworks();
   setProgress(0);
+  displayFireworks();
+  displayWinGameModal();
 }

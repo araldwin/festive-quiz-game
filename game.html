@@ -130,6 +130,30 @@
   </audio>
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="winGameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="winGameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="winGameModalLabel">Congratulations!</h1>
+        </div>
+        <div class="modal-body">
+          TODO: Add content here video or animation
+          <!-- https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal -->
+        </div>
+        <div class="modal-footer w-100">
+          <h5>Would you like to help Santa deliver some presents again?</h5>
+          <div class="text-end">
+            <button type="button" class="btn btn-primary">Yes</button>
+            <!-- redirect to home page by click -->
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">

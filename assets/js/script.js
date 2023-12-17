@@ -3,6 +3,8 @@ The general script for the all the pages.
 Used init bootstrap tooltips, popovers and modals throughout the site.
 */
 
+/*
+FIXME: Change to bootstrap modal
 const rulesButton = document.getElementById("rulesButton");
 const rulesModal = document.getElementById("rulesModal");
 
@@ -20,6 +22,7 @@ window.addEventListener("click", (event) => {
     closeModal();
   }
 });
+*/
 
 document.addEventListener("DOMContentLoaded", function () {
   const soundWrapper = document.getElementById("sound-wrapper");
