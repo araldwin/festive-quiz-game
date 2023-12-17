@@ -38,7 +38,7 @@ export const DATA = [
         },
         {
             "question": "In which modern day country was St. Nicholas born?",
-            "answers": ["Tuekey", "Israel", "Finland", "Spain"],
+            "answers": ["Turkey", "Israel", "Finland", "Spain"],
             "correctAnswer": "Turkey"
         },
         {
@@ -57,7 +57,7 @@ export const DATA = [
             "correctAnswer": "St. Stephen"
         },
         {
-            "question": "What colour suit did Santa wear until Coca Cola rebranded him in red",
+            "question": "What colour suit did Santa wear until Coca Cola rebranded him in red?",
             "answers": ["White", "Blue", "Purple", "Green"],
             "correctAnswer": "Green"
         }

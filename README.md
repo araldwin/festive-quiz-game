@@ -154,17 +154,22 @@ These colors are all reflected in the background image.
 
   - Caveat font
 
+  <img src="assets/readme.docs/Berkshire-Swash.png" width="400" alt="image of Berkshire Swash font">
+
+  - Berkshire Swash font
+
   The chosen fonts for the website were imported using Google Fonts.
   
-  After careful consideration, we have decided to use the fonts Caveat and Rubik Doodle Shadow for the text on screens of all sizes. We believe that these fonts offer a great combination of aesthetic appeal and readability, and will help to enhance the overall user experience.
-
-
-
+  After careful consideration, the team decided to use the fonts Caveat, Rubik Doodle Shadow and Berkshire Swash for the text on screens of all sizes. We believe that these fonts offer a great combination of aesthetic appeal and readability, and will help to enhance the overall user experience.
 
 
 ***
 
 ## Features
+
+### Composition of the Website
+
+  The website is organized into two distinct web pages such as the Homepage and the Game Page; the Game Page is accessible through a link in the New Game Button Bar at the center of the Homepage. Users can easily navigate to the Game Difficulty Menu where there are three option bars to select a difficulty level, after selecting a difficulty level, the Topic Menu is next; In the Topic Menu, the users have access to four distinc Topics such as Christmas Trivia, Christmas Movies, Christmas Music, and Christmas Food where they have the choices to select what topic they would like to answer and have fun with; clicking on the topic bar takes the user swiftly to the Game Page. The website's structure provides a smooth and efficient user experience.
 
 
 
@@ -181,6 +186,10 @@ These colors are all reflected in the background image.
 ## Testing
 
 ### Validator Testing
+
+
+
+## Credits
 
 
 
