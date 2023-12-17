@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 /*
 The game stylesheet.
 Used for the styling of the game page.
@@ -6,6 +9,7 @@ Used for the styling of the game page.
 body {
     margin: 0;
     overflow: hidden;
+    font-family: "Berkshire Swash";
   }
 
 .game-image {
