@@ -30,7 +30,7 @@ import {
 runGame();
 
 function runGame() {
-  if (getCurrentTopicObj() === null) {
+  if (getCurrentTopicObj() === null || getCurrentQuestion() === null || getAttempts() === null || getCurrentTopicObj().questions.length === 0) {
     // Redirect to the home page
     window.location.href = "index.html"
     return;
@@ -73,6 +73,7 @@ function checkAnswer(answer, answerButton) {
       // If there are no more questions, end the game
       if (getCurrentTopicObj().questions.length === 0) {
         endGame();
+        return;
       } else {
         // Update the current question in local storage
         setCurrentQuestion(getRandomQuestion());
@@ -92,6 +93,7 @@ function checkAnswer(answer, answerButton) {
       // If there are no more attempts or questions, end the game
       if (attempts < 1 || getCurrentTopicObj().questions.length === 0) {
         endGame();
+        return;
       } else {
         // Update the current question in local storage
         setCurrentQuestion(getRandomQuestion());
