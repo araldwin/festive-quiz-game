@@ -23,3 +23,11 @@ FIXME: Change to bootstrap modal
     font-family: 'Georgia', serif;
 }
 */
+
+
+/* Google */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+body {
+    font-family: 'Berkshire Swash';
+}

@@ -2,6 +2,7 @@
 This module contains functions to display the game.
 */
 
+import { stopSnowflakes } from "./snowflakes.js";
 
 /**
  * Display the available topics in the game.
@@ -20,7 +21,6 @@ export function displayAvailableTopics(availableTopics) {
 
   topicList.innerHTML = topicListHTML;
 }
-
 
 /**
  * Display the current topic in the game.
@@ -71,11 +71,10 @@ export function displayQuestionCount(questionCount) {
  * Display the number of attempts in the game, based on the difficulty level.
  */
 export function displayAttempts(attemptsNumber) {
-  const attemptsWrapper= document.getElementById("attempts");
+  const attemptsWrapper = document.getElementById("attempts");
   const attemptEl = `<i class="fa-solid fa-cookie fa-beat fa-lg" style="color: #ff781f;"></i>`;
   attemptsWrapper.innerHTML = attemptEl.repeat(attemptsNumber);
 }
-
 
 /**
  * Display the progress bar in the game.
@@ -90,16 +89,31 @@ export function displayProgress(progress) {
  * Display the firework animation when the game is won.
  */
 export function displayFireworks() {
-  for (let i = 0; i < 3; i++) {
-    // Create a new div element
-    const divElement = document.createElement('div');
+  stopSnowflakes();
 
-    // Add the "firework" class to the div element
-    divElement.className = 'firework';
+  // Create div elements
+  const parentDivElement = document.createElement("div");
+  const firstChildDivElement = document.createElement("div");
+  const secondChildDivElement = document.createElement("div");
 
-    // Append the div element to the body
-    document.body.appendChild(divElement);
-  }
+  // Add the "firework" class to the div element
+  parentDivElement.className = "pyro";
+
+  // Add the "before" class to the div element
+  firstChildDivElement.className = "before";
+
+  // Add the "after" class to the div element
+  secondChildDivElement.className = "after";
+
+  // Add child div elements to the parent div element
+  parentDivElement.appendChild(firstChildDivElement);
+  parentDivElement.appendChild(secondChildDivElement);
+
+  // Get the first child of the body
+  const firstChildOfBody = document.body.firstChild;
+
+  // Insert the div element before the first child of the body
+  document.body.insertBefore(parentDivElement, firstChildOfBody);
 }
 
 /**
@@ -115,5 +129,6 @@ export function displayWinGameModal() {
  */
 export function displayGameOverModal() {
   const gameOverModal = new bootstrap.Modal("#gameOverModal");
+  stopSnowflakes();
   gameOverModal.show();
 }

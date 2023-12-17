@@ -42,7 +42,6 @@
       <div class="col text-end">
         <span id="sound-wrapper">
           <!-- switch to mute icon when clicked using JS  -->
-          <i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>
         </span>
         <span class="rules-wrapper px-2" id="rulesButton">
           <i class="fas fa-l fa-question-circle" style="color: #17bf07;"></i>
@@ -130,23 +129,28 @@
 
 
   <!-- Win Game Modal -->
-  <div class="modal fade" id="winGameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="winGameModalLabel" aria-hidden="true">
+  <div class="modal fade" id="winGameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="winGameModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="winGameModalLabel">Congratulations!</h1>
         </div>
-        <div class="modal-body">
-          TODO: Add content here video or animation
+        <div id="win-trophy" class="modal-body">
+          <i class="fa-solid fa-trophy fa-bounce fa-2xl" style="color: #fbe709;"></i>
           <!-- https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal -->
         </div>
         <div class="modal-footer w-100">
-          <h5>Would you like to help Santa deliver some presents again?</h5>
-          <div class="text-end">
+          <h6>Would you like to help Santa deliver some presents again?</h6>
+          <div id="btn-txt" class="text-end">
             <!-- call seelectDifficultyModalToggle -->
-            <button type="button" class="btn btn-primary" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Yes</button>
+            <button type="button" class="btn btn-primary"
+              style="color: rgb(211, 3, 3); background-color: rgb(6, 214, 6); font-weight: bold;"
+              data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Yes</button>
             <!-- redirect to home page by click -->
-            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">No</button>
+            <button type="button" class="btn btn-secondary"
+              style="background-color: rgb(227, 5, 5); color: white; font-weight: bold;"
+              onclick="window.location.href='index.html'">No</button>
           </div>
         </div>
       </div>
@@ -156,23 +160,28 @@
 
 
   <!-- Game Over Modal -->
-  <div class="modal fade" id="gameOverModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameOverModalLabel" aria-hidden="true">
+  <div class="modal fade" id="gameOverModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="gameOverModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="gameOverModalLabel">Game Over!</h1>
         </div>
-        <div class="modal-body">
-          TODO: Add content here: video or animation
+        <div id="sad-smiley" class="modal-body">
+          <i class="fa-solid fa-face-sad-tear fa-flip-horizontal fa-2xl" style="color: #f5db2e;"></i>
           <!-- https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal -->
         </div>
         <div class="modal-footer w-100">
-          <h5>Would you like to help Santa deliver some presents again?</h5>
-          <div class="text-end">
+          <h6>Would you like to help Santa deliver some presents again?</h6>
+          <div id="btn-txt" class="text-end">
             <!-- call seelectDifficultyModalToggle -->
-            <button type="button" class="btn btn-primary" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Yes</button>
+            <button type="button" class="btn btn-primary"
+              style="color: rgb(211, 3, 3); background-color: rgb(6, 214, 6); font-weight: bold;"
+              data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Yes</button>
             <!-- redirect to home page by click -->
-            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">No</button>
+            <button type="button" class="btn btn-secondary"
+              style="background-color: rgb(227, 5, 5); color: white; font-weight: bold;"
+              onclick="window.location.href='index.html'">No</button>
           </div>
         </div>
       </div>
@@ -181,23 +190,27 @@
   <!-- ./Win Game Modal -->
 
 
-   <!-- Select Difficulty Modal -->
-  <div class="modal fade" id="selectDifficultyModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
-    tabindex="-1">
+  <!-- Select Difficulty Modal -->
+  <div class="modal fade" id="selectDifficultyModalToggle" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
-          <button type="button" class="btn-close" onclick="window.location.href='index.html'" aria-label="Close"></button>
+          <button type="button" class="btn-close" onclick="window.location.href='index.html'"
+            aria-label="Close"></button>
         </div>
         <div class="modal-body text-center">
-          <button class="btn btn-info w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="easy">
+          <button class="btn btn-success w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle"
+            data-bs-toggle="modal" data-difficulty="easy">
             Jingle Bells Level
           </button>
-          <button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="medium">
+          <button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle"
+            data-bs-toggle="modal" data-difficulty="medium">
             Frosty the Snowman Level
           </button>
-          <button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="hard">
+          <button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle"
+            data-bs-toggle="modal" data-difficulty="hard">
             Santa's Workshop Challenge
           </button>
         </div>
@@ -207,13 +220,14 @@
   <!-- ./Select Difficulty Modal -->
 
   <!-- Select Topic Modal -->
-  <div class="modal fade" id="selectTopicModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
-    tabindex="-1">
+  <div class="modal fade" id="selectTopicModalToggle" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
-          <button type="button" class="btn-close" onclick="window.location.href='index.html'" aria-label="Close"></button>
+          <button type="button" class="btn-close" onclick="window.location.href='index.html'"
+            aria-label="Close"></button>
         </div>
         <div id="topic-list" class="modal-body text-center">
           <!-- Use JS to populate the topics. See assets/js/game-display.js -> displayAvailableTopics -->
@@ -221,7 +235,18 @@
       </div>
     </div>
   </div>
-<!-- ./Select Topic Modal -->
+  <!-- ./Select Topic Modal -->
+
+
+  <!--
+  Snowflakes
+  Functionality in assets/js/script.js
+
+  Credits:
+  https://github.com/hcodes/snowflakes/
+  -->
+  <div id="snowflakes-container"></div>
+  <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 
 
   <!-- Bootstrap JS -->
@@ -234,6 +259,7 @@
 
   <!-- Custom JS -->
   <script type="module" src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/snowflakes.js"></script>
   <script type="module" src="assets/js/db.js"></script>
   <script type="module" src="assets/js/game-storage.js"></script>
   <script type="module" src="assets/js/game-display.js"></script>
