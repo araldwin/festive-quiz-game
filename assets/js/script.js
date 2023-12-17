@@ -24,7 +24,16 @@ window.addEventListener("click", (event) => {
 });
 */
 
+import {
+  setDifficulty,
+  getAvailableTopics,
+  setCurrentTopicByName,
+} from "./game-storage.js";
+import { displayAvailableTopics } from "./game-display.js";
+
 document.addEventListener("DOMContentLoaded", function () {
+
+  // Sound
   const soundWrapper = document.getElementById("sound-wrapper");
   const music = document.getElementById("background-music");
 
@@ -35,5 +44,33 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       music.pause();
     }
+  });
+  // ./Sound
+
+
+  // Get the difficulty buttons
+  const difficultyButtons = document.querySelectorAll(".difficulty-btn");
+
+  // Set the difficulty level in local storage when a button is clicked
+  difficultyButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const difficulty = button.dataset.difficulty;
+      setDifficulty(difficulty);
+    });
+  });
+
+  displayAvailableTopics(getAvailableTopics());
+
+  // Get the topic buttons
+  const topicButtons = document.querySelectorAll(".topicBtn");
+
+  // Set the topic in local storage when a button is clicked
+  topicButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const topicName = button.dataset.topic;
+      setCurrentTopicByName(topicName);
+      // Redirect to the game page
+      window.location.href = "game.html";
+    });
   });
 });

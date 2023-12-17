@@ -130,7 +130,7 @@
   </audio>
 
 
-  <!-- Modal -->
+  <!-- Win Game Modal -->
   <div class="modal fade" id="winGameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="winGameModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -144,7 +144,8 @@
         <div class="modal-footer w-100">
           <h5>Would you like to help Santa deliver some presents again?</h5>
           <div class="text-end">
-            <button type="button" class="btn btn-primary">Yes</button>
+            <!-- call seelectDifficultyModalToggle -->
+            <button type="button" class="btn btn-primary" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Yes</button>
             <!-- redirect to home page by click -->
             <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">No</button>
           </div>
@@ -152,6 +153,50 @@
       </div>
     </div>
   </div>
+  <!-- ./Win Game Modal -->
+
+
+   <!-- Select Difficulty Modal -->
+  <div class="modal fade" id="selectDifficultyModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
+          <button type="button" class="btn-close" onclick="window.location.href='index.html'" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <button class="btn btn-info w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="easy">
+            Jingle Bells Level
+          </button>
+          <button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="medium">
+            Frosty the Snowman Level
+          </button>
+          <button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="hard">
+            Santa's Workshop Challenge
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ./Select Difficulty Modal -->
+
+  <!-- Select Topic Modal -->
+  <div class="modal fade" id="selectTopicModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
+          <button type="button" class="btn-close" onclick="window.location.href='index.html'" aria-label="Close"></button>
+        </div>
+        <div id="topic-list" class="modal-body text-center">
+          <!-- Use JS to populate the topics. See assets/js/game-display.js -> displayAvailableTopics -->
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ./Select Topic Modal -->
 
 
   <!-- Bootstrap JS -->
@@ -163,7 +208,7 @@
   </script>
 
   <!-- Custom JS -->
-  <script src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
   <script type="module" src="assets/js/db.js"></script>
   <script type="module" src="assets/js/game-storage.js"></script>
   <script type="module" src="assets/js/game-display.js"></script>
