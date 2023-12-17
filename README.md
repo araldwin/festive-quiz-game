@@ -92,7 +92,12 @@ The purpose of the website is to provide users with a way to take a break from t
   - Game area wireframe option 2.
   <img src="assets/readme.docs/Option 2.png" width="600" alt="image of game area option 2 wireframe idea">
 
-  
+
+  - Game area wireframe option 3.
+  <img src="assets/readme.docs/Option 3.png" width="600" alt="image of game area option 3 wireframe idea">
+
+
+
 ***
 
 
