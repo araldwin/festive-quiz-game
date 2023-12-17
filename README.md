@@ -129,10 +129,46 @@ The purpose of the website is to provide users with a way to take a break from t
 
 ### Color Scheme
 
+<img src="assets/readme.docs/Color Hunt Palette c21010e64848fffde3cfe8a9.png" width="500" alt="image of color palette">
+
+In order for users to fully immerse themselves in the moment and the season, we have chosen colors that reflect the themes of love and harmony, as well as the festive atmosphere of Christmas. Our color palette includes a variety of shades that capture these feelings and emotions. The colors are: Venetian Red, Carmine Pink, Light Yellow, and Menthol.
+These colors are all reflected in the background image.
+
+
 
 ### Typography
 
+- #### Background
+  A background image with Christmas theme was added to the webpage to give a 3D effect and make the heading area look more interactive. The homepage features an animated background theme with a woodfire effect to create a cozy and warm atmosphere of Christmas.
+  As users might expect, they want to feel immersed in the Christmas atmosphere, so the team opted for a background that is visually appealing and gives the right impression.
 
+
+- #### Fonts
+
+  The chosen fonts for the website were imported using Google Fonts.
+
+
+
+
+***
+
+## Features
+
+
+
+***
+
+
+
+## Technologies Used
+
+
+
+***
+
+## Testing
+
+### Validator Testing
 
 
 
