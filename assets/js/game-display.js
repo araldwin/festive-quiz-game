@@ -60,6 +60,15 @@ export function displayQuestion(questionObj) {
 }
 
 /**
+ * Display the question count in the game.
+ * @param {number} questionCount - The number of remaining questions in the current topic.
+ */
+export function displayQuestionCount(questionCount) {
+  const questionCountEl = document.getElementById("question-count");
+  questionCountEl.textContent = questionCount + 1;
+}
+
+/**
  * Display the number of attempts in the game, based on the difficulty level.
  */
 export function displayAttempts(attemptsNumber) {
