@@ -107,7 +107,6 @@ export function displayFireworks() {
  */
 export function displayWinGameModal() {
   const winGameModal = new bootstrap.Modal("#winGameModal");
-  // data-bs-backdrop="static" data-bs-keyboard="false"
   winGameModal.show();
 }
 
@@ -118,4 +117,3 @@ export function displayGameOverModal() {
   const gameOverModal = new bootstrap.Modal("#gameOverModal");
   gameOverModal.show();
 }
-test
