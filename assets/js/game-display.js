@@ -86,3 +86,19 @@ export function displayProgress(progress) {
   progressBar.style.width = `${progress}%`;
   progressBar.setAttribute("aria-valuenow", progress);
 }
+
+/**
+ * Display the firework animation when the game is won.
+ */
+export function displayFireworks() {
+  for (let i = 0; i < 3; i++) {
+    // Create a new div element
+    const divElement = document.createElement('div');
+
+    // Add the "firework" class to the div element
+    divElement.className = 'firework';
+
+    // Append the div element to the body
+    document.body.appendChild(divElement);
+  }
+}
