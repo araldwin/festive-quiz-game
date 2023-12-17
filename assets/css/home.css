@@ -26,7 +26,7 @@ body {
 }
 
 #sound-wrapper i:hover {
-	font-size: 3rem;
+	cursor: pointer;
 }
 
 /* hero section style */
@@ -132,3 +132,4 @@ nav ul {
 		background: url(/assets/images/santa-on-the-sleigh.jpg) no-repeat left center/cover;
 	}
 }
+

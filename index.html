@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/home.css">
   <link rel="stylesheet" href="css/game.css">
 
@@ -39,7 +39,55 @@
 			</nav>
 			<div class="content">
 				<h1>Santa's Quiz Adventure!</h1>
-       	         <button id="new-game-btn" class="btn" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">New Game</button>
+       	  <button id="new-game-btn" class="btn" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Frosty Start</button>
+					<!-- Button trigger modal -->
+					<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#rulesModal">
+						Elfin Instructions
+					</button>
+				<div>
+				</div>
+
+				<!-- developer profile section -->
+				<div class="container fixed-bottom p-5">
+				<div class="row">
+					<div class="col">
+					<div class="wrapper">
+						<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/2.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+					<div class="col">
+					<a href="#">
+						<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
+						</a>
+					</div>
+				</div>
 			</div>
 			
 		<!-- developer profile section -->
@@ -94,7 +142,7 @@
 		Your browser does not support the audio tag.
 	</audio>
 
-<!-- Modal -->
+<!-- Select Difficulty Modal -->
  <div class="modal fade" id="selectDifficultyModalToggle" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
  tabindex="-1">
  <div class="modal-dialog modal-dialog-centered">
@@ -117,6 +165,9 @@
    </div>
  </div>
 </div>
+<!-- ./Select Difficulty Modal -->
+
+<!-- Select Topic Modal -->
 <div class="modal fade" id="selectTopicModalToggle" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
  tabindex="-1">
  <div class="modal-dialog modal-dialog-centered">
@@ -131,7 +182,54 @@
    </div>
  </div>
 </div>
-<!-- ./Modal -->
+<!-- ./Select Topic Modal -->
+
+
+<!-- Rules Modal -->
+	<div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header border-0">
+				<h1 class="modal-title fs-5 w-100 text-center" id="rulesModalLabel">Welcome to Santa's Quiz Adventure!</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h5>Mission:</h5>
+				<p>
+					Help Santa and his magical sleigh reach the North Pole by answering Christmas-themed questions correctly.
+					The journey is filled with joy and challenges, so put on your thinking cap and spread the holiday spirit!
+				</p>
+
+				<h5>Elfin Instructions:</h5>
+				<!-- style list markers as stars -->
+				<ul class="rule-markers">
+					<li>
+						Choose a difficulty level: Easy, Medium, or Hard.
+						Each setting represents the magical journey's intensity and the number of lives Santa has.
+						<ul class="list-unstyled">
+							<li>🌟 Easy: 3 lives</li>
+							<li>🌲 Medium: 2 lives</li>
+							<li>❄️ Hard: 1 life</li>
+						</ul>
+					</li>
+					<li>
+						Answer questions correctly to advance Santa and his sleigh along the progress bar.
+						The more questions you get right, the closer Santa gets to the enchanting North Pole.
+					</li>
+					<li>
+						But beware! Incorrect answers may cost Santa precious lives(deers).
+						Keep an eye on the remaining lives, and don't let them run out before reaching the North Pole!
+					</li>
+				</ul>
+
+			</div>
+			<div class="modal-footer d-flex justify-content-center">
+				<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#selectDifficultyModalToggle">Ho-Ho Hurry!</button>
+			</div>
+		</div>
+	</div>
+	</div>
+	<!-- ./Rules Modal -->
 
   <!--
   Snowflakes
