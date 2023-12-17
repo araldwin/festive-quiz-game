@@ -32,27 +32,18 @@
     <!-- Navbar -->
     <div id="navbar" class="row ">
       <div class="col-4 px-4">
-        <div class="btn btn-md" id="btn-back">
-          <a href="index.html">
-            <i class="fa-solid fa-circle-arrow-left fa-2xl" style="color: #17bf07;"></i>
-          </a>
-        </div>
+        <a href="index.html" class="icon-btn">
+          <i class="fa-solid fa-circle-arrow-left fa-l" style="color: #17bf07;"></i>
+        </a>
       </div>
 
       <div class="col text-end">
-        <span id="sound-wrapper">
+        <button id="sound-wrapper" class="icon-btn">
           <!-- switch to mute icon when clicked using JS  -->
-        </span>
-        <span class="rules-wrapper px-2" id="rulesButton">
+        </b>
+        <button id="rulesButton" type="button" class="px-2 icon-btn" data-bs-toggle="modal" data-bs-target="#rulesModal">
           <i class="fas fa-l fa-question-circle" style="color: #17bf07;"></i>
-          <div id="rulesModal" class="modal">
-            <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <h2>Rules</h2>
-              <p>Welcome to Santa's Quiz Adventure</p>
-            </div>
-          </div>
-        </span>
+        </button>
       </div>
     </div>
     <!-- ./Navbar -->
@@ -238,6 +229,11 @@
   <!-- ./Select Topic Modal -->
 
 
+  <!-- Modals wrapper -->
+  <div id="modals-container">
+    <!-- Use JS to populate the modals here -->
+  </div>
+
   <!--
   Snowflakes
   Functionality in assets/js/script.js
@@ -258,6 +254,7 @@
   </script>
 
   <!-- Custom JS -->
+  <script src="assets/js/modals/rules.js"></script>
   <script type="module" src="assets/js/script.js"></script>
   <script type="module" src="assets/js/snowflakes.js"></script>
   <script type="module" src="assets/js/db.js"></script>

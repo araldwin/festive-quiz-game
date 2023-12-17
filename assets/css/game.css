@@ -22,17 +22,23 @@ body {
     font-size: xx-large;
 }
 
-#btn-back {
-    height: 40px;
-    width: 80px;
-    border-style: none;
+
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
 }
 
-#btn-back:hover {
-    background-color: rgb(241, 21, 21);
-    border-color: gold;
-
+.icon-btn i:hover {
+    background-color: transparent;
+    transform: scale(1.07);
+    color: #1cc70c !important;
+    transition: transform 0.2s ease-in-out;
 }
+
 #answers .btn {
     width: 200px;
     height: 80px;
