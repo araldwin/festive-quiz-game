@@ -8,6 +8,8 @@ It also contains the functions that control the game play.
 import {
   getAttempts,
   setAttempts,
+  getCurrentTopicObj,
+  getRandomQuestion,
   setCurrentQuestion,
   getCurrentQuestion,
   getProgress,
@@ -16,14 +18,19 @@ import {
 import {
   displayAttempts,
   displayQuestion,
+  displayQuestionCount,
+  displayCurrentTopic,
   displayProgress,
+  displayFireworks,
 } from "./game-display.js";
 
 runGame();
 
 function runGame() {
-  displayAttempts(getAttempts());
+  displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
+  displayQuestionCount(getCurrentTopicObj().questions.length);
+  displayAttempts(getAttempts());
   displayProgress(getProgress());
 
   attachEventListeners();
@@ -38,9 +45,6 @@ function checkAnswer(answer, answerButton) {
   const currentQuestion = getCurrentQuestion();
   const correctAnswer = currentQuestion.correctAnswer;
 
-  // Update the current question in local storage
-  setCurrentQuestion();
-
   if (answer === correctAnswer) {
     // Correct answer
     // Update the display progress
@@ -49,9 +53,21 @@ function checkAnswer(answer, answerButton) {
 
     // Mark the answer as correct
     markAnswerCorrect(answerButton);
-    // Run the game again
+
+    if (progress === 100) {
+      winGame();
+      return;
+    }
+
     setTimeout(() => {
-      runGame();
+      // If there are no more questions, end the game
+      if (getCurrentTopicObj().questions.length === 0) {
+        endGame();
+      } else {
+        // Update the current question in local storage
+        setCurrentQuestion(getRandomQuestion());
+        runGame();
+      }
     }, 2000);
   } else {
     // Wrong answer
@@ -63,10 +79,12 @@ function checkAnswer(answer, answerButton) {
     displayAttempts(attempts);
 
     setTimeout(() => {
-      if (attempts < 1) {
+      // If there are no more attempts or questions, end the game
+      if (attempts < 1 || getCurrentTopicObj().questions.length === 0) {
         endGame();
-        return;
       } else {
+        // Update the current question in local storage
+        setCurrentQuestion(getRandomQuestion());
         runGame();
       }
     }, 2000);
@@ -92,7 +110,7 @@ function attachEventListeners() {
  */
 function updateProgress() {
   const currentProgress = getProgress();
-  const updatedProgress = currentProgress + 10;
+  const updatedProgress = currentProgress + 20;
   setProgress(updatedProgress);
 
   return updatedProgress;
@@ -132,5 +150,14 @@ function endGame() {
   // TODO: Display the game over modal
   // const gameOverModal = document.getElementById("gameOverModal");
   alert("Game Over");
+  setProgress(0);
+}
+
+/**
+ * Win the game
+ * Display the win modal and reset progress
+ */
+function winGame() {
+  displayFireworks();
   setProgress(0);
 }

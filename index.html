@@ -93,45 +93,44 @@
 		</div>
 	</div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="selectDifficultyModalToggle" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
-	tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
-	<div class="modal-content">
-		<div class="modal-header">
-		<h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
-		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body text-center">
-		<button class="btn btn-info w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="easy">
-			Jingle Bells Level
-		</button>
-		<button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="medium">
-			Frosty the Snowman Level
-		</button>
-		<button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="hard">
-			Santa's Workshop Challenge
-		</button>
-		</div>
-	</div>
-	</div>
-	</div>
-	<div class="modal fade" id="selectTopicModalToggle" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
-	tabindex="-1">
-	<div class="modal-dialog modal-dialog-centered">
-	<div class="modal-content">
-		<div class="modal-header">
-		<h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
-		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div id="topic-list" class="modal-body">
-		<!-- TODO: Use JS to populate the topics -->
-		</div>
-	</div>
-	</div>
-	</div>
-	<!-- ./Modal -->
-
+<!-- Modal -->
+ <div class="modal fade" id="selectDifficultyModalToggle" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
+ tabindex="-1">
+ <div class="modal-dialog modal-dialog-centered">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div class="modal-body text-center">
+       <button class="btn btn-info w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="easy">
+         Jingle Bells Level
+       </button>
+       <button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="medium">
+         Frosty the Snowman Level
+       </button>
+       <button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="hard">
+         Santa's Workshop Challenge
+       </button>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="modal fade" id="selectTopicModalToggle" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
+ tabindex="-1">
+ <div class="modal-dialog modal-dialog-centered">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+     </div>
+     <div id="topic-list" class="modal-body text-center">
+       <!-- Use JS to populate the topics. See assets/js/game-display.js -> displayAvailableTopics -->
+     </div>
+   </div>
+ </div>
+</div>
+<!-- ./Modal -->
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
