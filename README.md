@@ -179,7 +179,42 @@ These colors are all reflected in the background image.
 
 ## Technologies Used
 
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) | was used to build the structure of the website.
 
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) | was used to add style thw website.
+
+- [JavaScript](https://pythontutor.com/javascript.html#mode=edit) | was used to add dynamism and interactivity to the website.
+
+- [BootStrap](https://getbootstrap.com/) | was used to add positioning and responsiveness to the website.
+
+- [VS Code](https://code.visualstudio.com/) | was used as the IDE to write, edit, merge, and push codes.
+
+- [Git](https://git-scm.com/) | was used for the version control of the website.
+
+- [GitHub](https://github.com/) | was used to host the code of the website and for deployment.
+
+
+## Tools
+
+  - [Pixabay](https://pixabay.com/) | was used to get favicon for website.
+
+  - [Unsplash](https://unsplash.com/) | was used to get images for website.
+
+  - [Canva](https://www.canva.com/) | was used to edit images for website.
+
+  - [Color Hunt](https://colorhunt.co/palette/c21010e64848fffde3cfe8a9) | was used to choose colors palette for website.
+
+  - [Compressor](https://compressor.io/) | was used to optimise images for website.
+
+  - [Font Awesome](https://fontawesome.com/) | was used to select icons for website.
+
+  - [I Am Responsive](https://ui.dev/amiresponsive) | was used to check website responsiveness on all devices.
+
+  - [Tiny](https://tinypng.com/) | was used to optimise images for website.
+
+  - [Color Name](https://www.color-name.com/) | was used to detect color names.
+
+  - [MS Word](https://en.wikipedia.org/wiki/Microsoft_Word) | used to correct the grammar.
 
 ***
 
@@ -190,6 +225,35 @@ These colors are all reflected in the background image.
 
 
 ## Credits
+
+- #### Theme Colors & Page animations
+
+  Some of the content of the webpage such as fireworks were inspired by [Alvaro Montoro](https://alvaromontoro.com/blog/68002/creating-a-firework-effect-with-css).
+
+  The animated snowflakes of the webpages were inspired by [Denis Seleznev](https://github.com/hcodes/snowflakes/).
+
+
+  Other animated and interactive contents of the webpages were inspired by [Eddie Lin](https://jsfiddle.net/elin/7m3bL/).
+
+
+- #### Background and Music
+  
+  The 3D animated background contents of the webpages were inspired by [FREEPIK](https://www.freepik.com/).
+
+  The Background Image contents of the webpages were inspired by [PEXELS](https://www.pexels.com/).
+
+  The interactive music contents of the webpages were inspired by [Eddie Lin]().
+  
+- #### Festive Quiz Game Website Building Team
+
+
+  This website is a masterpiece, meticulously crafted and designed by a team of highly skilled experienced software developers listed below:
+
+  - 
+
+
+
+
 
 
 
