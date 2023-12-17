@@ -38,7 +38,6 @@
 				<ul>
 					<span id="sound-wrapper">
 						<!-- switch to mute icon when clicked using JS  -->
-						<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>
 					</span>
 				</ul>
 			</nav>
@@ -93,9 +92,9 @@
 	</div>
 
 	<!-- Audio -->
-<audio id="background-music" loop>
-	<source src="assets/media/indie-pop-jingle-bells-179299.mp3" type="audio/mp3">
-	Your browser does not support the audio tag.
+	<audio id="background-music" loop>
+		<source src="assets/media/indie-pop-jingle-bells-179299.mp3" type="audio/mp3">
+		Your browser does not support the audio tag.
 	</audio>
 
 <!-- Modal -->
@@ -137,6 +136,16 @@
 </div>
 <!-- ./Modal -->
 
+  <!--
+  Snowflakes
+  Functionality in assets/js/script.js
+
+  Credits:
+  https://github.com/hcodes/snowflakes/
+  -->
+  <div id="snowflakes-container"></div>
+  <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
@@ -146,7 +155,8 @@
 
   <!-- Custom JS -->
   <script type="module" src="assets/js/game-storage.js"></script>
+  <script type="module" src="assets/js/snowflakes.js"></script>
   <script type="module" src="assets/js/script.js"></script>
-  <script type="module" src="assets/js/home.js"></script> type="text/css"
+  <script type="module" src="assets/js/home.js"></script>
 	</body>
 </html>
