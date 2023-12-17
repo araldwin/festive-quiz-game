@@ -1,6 +1,6 @@
 <h1 align= "center"> Festive Quiz Game | Christmas 2023</h1>
 
-[Click for live view](https://)
+[Click for live view](https://flashdrag.github.io/festive-quiz-game/)
 
 
 
@@ -108,9 +108,31 @@ The purpose of the website is to provide users with a way to take a break from t
   - To facilitate simultaneous navigation for users during the quiz.
   - To ensure that users experience high-performance interactivity while playing the game.
 
+#### First Time Visitor Goal
+
+  - I want to find out about the Festive Quiz Game and if I can access the levels of the  game.
+  - I want to easily navigate the site and access different parts of the game.
+  - I would like to know what gift is presented at the end of the game.
 
 
-## Color Scheme
+#### Returning Visitor Goal
+
+  - I want to know what improvements have been made to the game and what are the different levels.
+  - I want to play more to achieve more Santa gifts.
+
+#### Frequent Visitor Goal
+
+  - I want to recommend the Festive Quiz Game for my loved ones to enjoy during the holidays.
+
+
+## Design
+
+### Color Scheme
+
+
+### Typography
+
+
 
 
 
