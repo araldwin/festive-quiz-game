@@ -146,7 +146,7 @@ h3 {
     ;
   background-size: 0.5vmin 0.5vmin;
   background-repeat: no-repeat;
-  animation: firework 5s infinite;
+  animation: firework 2s infinite;
 }
 
 .firework::before {
