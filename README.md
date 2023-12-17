@@ -138,7 +138,37 @@ These colors are all reflected in the background image.
 
 ### Typography
 
+- #### Background
+  A background image with Christmas theme was added to the webpage to give a 3D effect and make the heading area look more interactive. The homepage features an animated background theme with a woodfire effect to create a cozy and warm atmosphere of Christmas.
+  As users might expect, they want to feel immersed in the Christmas atmosphere, so the team opted for a background that is visually appealing and gives the right impression.
 
+
+- #### Fonts
+
+  The chosen fonts for the website were imported using Google Fonts.
+
+
+
+
+***
+
+## Features
+
+
+
+***
+
+
+
+## Technologies Used
+
+
+
+***
+
+## Testing
+
+### Validator Testing
 
 
 
