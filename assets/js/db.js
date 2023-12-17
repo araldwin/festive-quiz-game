@@ -38,7 +38,7 @@ export const DATA = [
         },
         {
             "question": "In which modern day country was St. Nicholas born?",
-            "answers": ["Tuekey", "Israel", "Finland", "Spain"],
+            "answers": ["Turkey", "Israel", "Finland", "Spain"],
             "correctAnswer": "Turkey"
         },
         {
