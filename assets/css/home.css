@@ -25,7 +25,7 @@ body {
 }
 
 #sound-wrapper i:hover {
-	font-size: 3rem;
+	cursor: pointer;
 }
 
 /* hero section style */
@@ -132,4 +132,4 @@ nav ul {
 	}
 }
 
-	
+
