@@ -8,6 +8,7 @@ It also contains the functions that control the game play.
 import {
   getAttempts,
   setAttempts,
+  setCurrentTopic,
   getCurrentTopicObj,
   getRandomQuestion,
   setCurrentQuestion,
@@ -22,6 +23,8 @@ import {
   displayCurrentTopic,
   displayProgress,
   displayFireworks,
+  displayWinGameModal,
+  displayGameOverModal,
 } from "./game-display.js";
 
 runGame();
@@ -149,8 +152,12 @@ function markAnswerWrong(answerButton) {
 function endGame() {
   // TODO: Display the game over modal
   // const gameOverModal = document.getElementById("gameOverModal");
-  alert("Game Over");
   setProgress(0);
+  setCurrentTopic(null);
+  setCurrentQuestion(null);
+  setTimeout(() => {
+    displayGameOverModal();
+  }, 1000);
 }
 
 /**
@@ -158,6 +165,11 @@ function endGame() {
  * Display the win modal and reset progress
  */
 function winGame() {
-  displayFireworks();
   setProgress(0);
+  setCurrentTopic(null);
+  setCurrentQuestion(null);
+  displayFireworks();
+  setTimeout(() => {
+    displayWinGameModal();
+  }, 3000);
 }

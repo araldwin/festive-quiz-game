@@ -32,7 +32,7 @@ body {
     border-color: gold;
 
 }
-.btn {
+#answers .btn {
     width: 200px;
     height: 80px;
     font-weight: 500;
@@ -41,7 +41,7 @@ body {
     border-color: #12b103;
 }
 
-.btn:hover {
+#answers .btn:hover {
     background-color: #0d6e04;
     color: rgb(241, 21, 21);
     border-color: gold;
@@ -96,6 +96,8 @@ body {
 
 
 /* Fireworks */
+/* https://alvaromontoro.com/blog/68002/creating-a-firework-effect-with-css */
+
 @keyframes firework {
     0% {
       transform: translate(-50%, 60vh);

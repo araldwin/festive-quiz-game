@@ -65,7 +65,7 @@ export function displayQuestion(questionObj) {
  */
 export function displayQuestionCount(questionCount) {
   const questionCountEl = document.getElementById("question-count");
-  questionCountEl.textContent = questionCount + 1;
+  questionCountEl.textContent = questionCount;
 }
 
 /**
@@ -101,4 +101,21 @@ export function displayFireworks() {
     // Append the div element to the body
     document.body.appendChild(divElement);
   }
+}
+
+/**
+ * Display the win game modal.
+ */
+export function displayWinGameModal() {
+  const winGameModal = new bootstrap.Modal("#winGameModal");
+  // data-bs-backdrop="static" data-bs-keyboard="false"
+  winGameModal.show();
+}
+
+/**
+ * Display the game over modal.
+ */
+export function displayGameOverModal() {
+  const gameOverModal = new bootstrap.Modal("#gameOverModal");
+  gameOverModal.show();
 }
