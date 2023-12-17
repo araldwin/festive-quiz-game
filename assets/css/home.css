@@ -22,6 +22,12 @@ body {
 	z-index: -1;
 }
 
+/* Sound icon */
+#sound-wrapper i {
+	font-size: 2rem;
+	color: #fff;
+}
+
 /* hero section style */
 .home {
 	width: 100%;
@@ -53,23 +59,6 @@ nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-#sound-wrapper i {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 60px;
-	height: 60px;
-	overflow: hidden;
-	color: #18e906;
-
-	transition: color 0.1s ease-in-out;
-}
-
-#sound-wrapper:hover i {
-	color: #ffffff;
 }
 
 .content {
@@ -130,13 +119,6 @@ nav ul {
 }
 
 /* Media queries for responsiveness */
-
-/* Sound Icon */
-@media (max-width: 768px) {
-	#sound-wrapper i {
-		font-size: 1.5em;
-	}
-}
 
 /* Background Video */
 @media (min-aspect-ratio: 16/9) {
