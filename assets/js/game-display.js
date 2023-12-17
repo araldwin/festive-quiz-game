@@ -64,7 +64,7 @@ export function displayQuestion(questionObj) {
  */
 export function displayQuestionCount(questionCount) {
   const questionCountEl = document.getElementById("question-count");
-  questionCountEl.textContent = questionCount;
+  questionCountEl.textContent = questionCount + 1;
 }
 
 /**
