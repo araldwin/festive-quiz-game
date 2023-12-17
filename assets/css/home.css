@@ -1,8 +1,3 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
-
-
-
 /*
 The home stylesheet.
 Used for the styling of the home page.
@@ -14,7 +9,6 @@ body {
 	padding: 0;
 	height: 100vh;
 	overflow: hidden; /* Prevent scrolling if the video overflows */
-	font-family: 'Berkshire Swash';
 	overflow:hidden;
 }
 
@@ -33,7 +27,7 @@ body {
 .home {
 	width: 100vw;
 	height: 100vh;
-	background: url(/assets/images/santa-on-the-sleigh.jpg) no-repeat center center/cover;
+	background: url(/assets/images/santa-background.jpg) no-repeat center center/cover;
 	padding: 5% 5%;
 	display: flex;
 	flex-direction: column;
@@ -132,4 +126,3 @@ nav ul {
 		background: url(/assets/images/santa-on-the-sleigh.jpg) no-repeat left center/cover;
 	}
 }
-
