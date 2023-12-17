@@ -37,6 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", () => {
       // Clear local storage before starting a new game
       localStorage.clear();
+
+      // remove the continue button if it exists
+      const continueBtn = document.getElementById("continue-game");
+      if (continueBtn) {
+        continueBtn.remove();
+      }
+
       const difficulty = button.dataset.difficulty;
       setDifficulty(difficulty);
     });
