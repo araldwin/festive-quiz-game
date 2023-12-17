@@ -30,6 +30,13 @@ import {
 runGame();
 
 function runGame() {
+  if (getCurrentTopicObj() === null) {
+    // Redirect to the home page
+    window.location.href = "index.html"
+    return;
+  }
+
+
   displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
   displayQuestionCount(getCurrentTopicObj().questions.length);
@@ -71,7 +78,7 @@ function checkAnswer(answer, answerButton) {
         setCurrentQuestion(getRandomQuestion());
         runGame();
       }
-    }, 2000);
+    }, 800);
   } else {
     // Wrong answer
     markAnswerWrong(answerButton);
@@ -90,7 +97,7 @@ function checkAnswer(answer, answerButton) {
         setCurrentQuestion(getRandomQuestion());
         runGame();
       }
-    }, 2000);
+    }, 800);
   }
 }
 
@@ -157,7 +164,7 @@ function endGame() {
   setCurrentQuestion(null);
   setTimeout(() => {
     displayGameOverModal();
-  }, 1000);
+  }, 300);
 }
 
 /**
@@ -171,5 +178,5 @@ function winGame() {
   displayFireworks();
   setTimeout(() => {
     displayWinGameModal();
-  }, 3000);
+  }, 2000);
 }
