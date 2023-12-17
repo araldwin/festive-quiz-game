@@ -100,6 +100,17 @@ The purpose of the website is to provide users with a way to take a break from t
 
 ***
 
+## User Experience (UX)
+
+### User Stories
+
+  - To be able to view the site on a range of device sizes.
+  - To facilitate simultaneous navigation for users during the quiz.
+  - To ensure that users experience high-performance interactivity while playing the game.
+
+
+
+## Color Scheme
 
 
 
