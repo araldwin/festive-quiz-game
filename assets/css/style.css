@@ -3,3 +3,10 @@ The main game stylesheet.
 Used for the general styling of the site eg. main font, etc.
 and for shared elements between the home page and the game page, eg. game rules modal, etc.
 */
+
+/* Google */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+body {
+    font-family: 'Berkshire Swash';
+}
