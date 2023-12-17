@@ -145,7 +145,19 @@ These colors are all reflected in the background image.
 
 - #### Fonts
 
+
+  <img src="assets/readme.docs/Rubik.png" width="400" alt="image of Rubik Doodle Shadow font">
+
+  - Rubik Doodle Shadow font
+
+  <img src="assets/readme.docs/Caveat.png" width="400" alt="image of Caveat font">
+
+  - Caveat font
+
   The chosen fonts for the website were imported using Google Fonts.
+  
+  After careful consideration, we have decided to use the fonts Caveat and Rubik Doodle Shadow for the text on screens of all sizes. We believe that these fonts offer a great combination of aesthetic appeal and readability, and will help to enhance the overall user experience.
+
 
 
 
