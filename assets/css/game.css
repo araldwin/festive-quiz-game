@@ -56,6 +56,10 @@ body {
     padding-left: 5px;
     padding-right: 5px;
 }
+h3 {
+  margin-left: 25%;
+  margin-right: 15%;
+}
 
 .progress {
     margin-left: 25%;
@@ -93,7 +97,7 @@ body {
 #gifts {
     font-size: large;
     background-color: #0d6e04;
-    width: 68px;
+    width: 65px;
     height: 40px;
     padding-top: 5px;
 }
@@ -120,6 +124,41 @@ body {
   -ms-animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
   animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards; }
 
+
+.firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}
+/* ./Fireworks */
+
+#gameOverModalLabel {
+  margin-left: 35%;
+  font-weight: bolder;
+}
+
+h6 {
+  padding-right: 20px;
+  font-weight: bolder;
+}
+
+#sad-smiley {
+  margin-left: 38%;
+  font-size: xx-large;
+}
+
+#btn-txt {
+  margin-right: 41%;
+}
+
+#winGameModalLabel {
+  margin-left: 32%;
+  font-weight: bolder;
+}
+
+#win-trophy {
+  margin-left: 38%;
+  font-size: xx-large;
+}
+=======
 .pyro > .after {
   -moz-animation-delay: 1.25s, 1.25s, 1.25s;
   -webkit-animation-delay: 1.25s, 1.25s, 1.25s;
@@ -288,3 +327,4 @@ body {
     margin-top: 30%;
     margin-left: 80%; } }
 /* ./Fireworks */
+
