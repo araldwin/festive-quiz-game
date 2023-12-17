@@ -7,9 +7,8 @@ Used for the styling of the home page.
 body {
 	margin: 0;
 	padding: 0;
-	height: 60vh;
+	height: 100vh;
 	overflow: hidden; /* Prevent scrolling if the video overflows */
-	overflow:hidden;
 }
 
 
