@@ -32,7 +32,6 @@ import {
 import { displayAvailableTopics } from "./game-display.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-
   // Sound
   const soundWrapper = document.getElementById("sound-wrapper");
   const music = document.getElementById("background-music");
@@ -47,13 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // ./Sound
 
-
   // Get the difficulty buttons
   const difficultyButtons = document.querySelectorAll(".difficulty-btn");
 
   // Set the difficulty level in local storage when a button is clicked
   difficultyButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      // Clear local storage before starting a new game
+      localStorage.clear();
       const difficulty = button.dataset.difficulty;
       setDifficulty(difficulty);
     });

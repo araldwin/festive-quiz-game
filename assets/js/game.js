@@ -30,6 +30,12 @@ import {
 runGame();
 
 function runGame() {
+  if (getCurrentTopicObj() === null || getCurrentQuestion() === null || getAttempts() === null) {
+    // Redirect to the home page
+    window.location.href = "index.html"
+    return;
+  }
+
   displayCurrentTopic(getCurrentTopicObj().topic);
   displayQuestion(getCurrentQuestion());
   displayQuestionCount(getCurrentTopicObj().questions.length);
@@ -66,12 +72,13 @@ function checkAnswer(answer, answerButton) {
       // If there are no more questions, end the game
       if (getCurrentTopicObj().questions.length === 0) {
         endGame();
+        return;
       } else {
         // Update the current question in local storage
         setCurrentQuestion(getRandomQuestion());
         runGame();
       }
-    }, 2000);
+    }, 800);
   } else {
     // Wrong answer
     markAnswerWrong(answerButton);
@@ -85,12 +92,13 @@ function checkAnswer(answer, answerButton) {
       // If there are no more attempts or questions, end the game
       if (attempts < 1 || getCurrentTopicObj().questions.length === 0) {
         endGame();
+        return;
       } else {
         // Update the current question in local storage
         setCurrentQuestion(getRandomQuestion());
         runGame();
       }
-    }, 2000);
+    }, 800);
   }
 }
 
@@ -150,14 +158,14 @@ function markAnswerWrong(answerButton) {
  * Display the game over modal and reset progress
  */
 function endGame() {
-  // TODO: Display the game over modal
-  // const gameOverModal = document.getElementById("gameOverModal");
+  displayQuestionCount(-1);
+  console.log(getCurrentTopicObj().questions.length);
   setProgress(0);
   setCurrentTopic(null);
   setCurrentQuestion(null);
   setTimeout(() => {
     displayGameOverModal();
-  }, 1000);
+  }, 300);
 }
 
 /**
@@ -171,5 +179,5 @@ function winGame() {
   displayFireworks();
   setTimeout(() => {
     displayWinGameModal();
-  }, 3000);
+  }, 2000);
 }

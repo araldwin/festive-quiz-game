@@ -1,40 +1,24 @@
-/*
-The home page script.
-This script is used for the game page.
-*/
+  // Add the continue button if there is a current topic
 
-import {
-  setDifficulty,
-  getAvailableTopics,
-  setCurrentTopicByName,
-} from "./game-storage.js";
-import { displayAvailableTopics } from "./game-display.js";
+import { getCurrentTopicObj } from "./game-storage.js";
+
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Get the difficulty buttons
-  const difficultyButtons = document.querySelectorAll(".difficulty-btn");
 
-  // Set the difficulty level in local storage when a button is clicked
-  difficultyButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const difficulty = button.dataset.difficulty;
-      setDifficulty(difficulty);
-    });
-  });
+  const newGameBtn = document.getElementById("new-game-btn");
+  if (getCurrentTopicObj() && getCurrentTopicObj().questions.length > -1) {
+    // If there is a current topic and current question, create the continue button
+    const continueBtn = document.createElement("button");
+    continueBtn.id = "continue-game";
+    continueBtn.className = "btn";
+    continueBtn.innerText = "Continue";
 
-  displayAvailableTopics(getAvailableTopics());
+    // Append the continue button after the new game button
+    newGameBtn.parentNode.insertBefore(continueBtn, newGameBtn.nextSibling);
 
-  // Get the topic buttons
-  const topicButtons = document.querySelectorAll(".topicBtn");
-
-  // Set the topic in local storage when a button is clicked
-  topicButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const topicName = button.dataset.topic;
-      setCurrentTopicByName(topicName);
-      // Redirect to the game page
+    // Attach the event listener to the continue button
+    continueBtn.addEventListener("click", () => {
       window.location.href = "game.html";
     });
-  });
-
+  }
 });

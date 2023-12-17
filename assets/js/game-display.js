@@ -10,7 +10,6 @@ This module contains functions to display the game.
 export function displayAvailableTopics(availableTopics) {
   const topicList = document.getElementById("topic-list");
   let topicListHTML = "";
-  console.log(availableTopics);
   availableTopics.forEach((topicName) => {
     topicListHTML += `
       <button class="btn btn-success w-75 my-1 topicBtn" data-topic="${topicName}">
@@ -65,7 +64,7 @@ export function displayQuestion(questionObj) {
  */
 export function displayQuestionCount(questionCount) {
   const questionCountEl = document.getElementById("question-count");
-  questionCountEl.textContent = questionCount;
+  questionCountEl.textContent = questionCount + 1;
 }
 
 /**
