@@ -249,7 +249,13 @@ These colors are all reflected in the background image.
 
   This website is a masterpiece, meticulously crafted and designed by a team of highly skilled experienced software developers listed below:
 
-  - 
+  - [Pavlo Myskov](https://github.com/FlashDrag) | Srum Master - Software Developer  | [LinkedIn](https://www.linkedin.com/in/pavlo-myskov/)
+  - [Aldwin Arriola](https://github.com/araldwin) | Coder - Software Developer  | [LinkedIn](https://www.linkedin.com/in/aldwinarriola/)
+  - [Peter Coates](https://github.com/coatespeter) | Coder - Software Developer  | [LinkedIn](https://www.linkedin.com/in/peter-c-1a474953/)
+  - [Andreas Parides](https://github.com/parides55) | Coder - Software Developer | [LinkedIn](http://www.linkedin.com/in/andreas-parides-104708b1)
+  - [Emmanuel Oluwadare](https://github.com/Emmy-Dare274) | Coder - Software Developer |  [LinkedIn](https://www.linkedin.com/in/emmanuel-o-oluwadare/)
+  - [Jo Healy](https://github.com/Josephine2244) | Coder - Software Developer  |  [LinkedIn](http://linkedin.com/in/josephine-healy-934378261)
+  - [Rohina Usman](https://github.com/ru22-14) | Coder - Software Developer  |  [LinkedIn](https://www.linkedin.com/in/rohina-usman-029614290/)
 
 
 
