@@ -22,22 +22,31 @@ export function displayAvailableTopics(availableTopics) {
   topicList.innerHTML = topicListHTML;
 }
 
+
+/**
+ * Display the current topic in the game.
+ * @param {string} topicName - The current topic name.
+ */
+export function displayCurrentTopic(topicName) {
+  const topic = document.getElementById("topic");
+  topic.textContent = topicName;
+}
+
 /**
  * Display topic, question and answers in the game.
- * @param {*} randomQuestionObj
+ * @param {*} questionObj
+ * E.g: {question: "What is?", answers: ["a", "b", "c", "d"], correctAnswer: "a"}
  */
-export function displayQuestion(randomQuestionObj) {
-  const topic = document.getElementById("topic");
+export function displayQuestion(questionObj) {
   const question = document.getElementById("question");
   const answers = document.getElementById("answers");
 
-  const answer1 = randomQuestionObj.answers[0];
-  const answer2 = randomQuestionObj.answers[1];
-  const answer3 = randomQuestionObj.answers[2];
-  const answer4 = randomQuestionObj.answers[3];
+  const answer1 = questionObj.answers[0];
+  const answer2 = questionObj.answers[1];
+  const answer3 = questionObj.answers[2];
+  const answer4 = questionObj.answers[3];
 
-  topic.textContent = randomQuestionObj.topic;
-  question.textContent = randomQuestionObj.question;
+  question.textContent = questionObj.question;
   answers.innerHTML = `
     <div class="col-12">
       <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer1}</button>
@@ -48,6 +57,15 @@ export function displayQuestion(randomQuestionObj) {
       <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer4}</button>
     </div>
   `;
+}
+
+/**
+ * Display the question count in the game.
+ * @param {number} questionCount - The number of remaining questions in the current topic.
+ */
+export function displayQuestionCount(questionCount) {
+  const questionCountEl = document.getElementById("question-count");
+  questionCountEl.textContent = questionCount + 1;
 }
 
 /**
@@ -67,4 +85,20 @@ export function displayProgress(progress) {
   const progressBar = document.querySelector(".progress-bar");
   progressBar.style.width = `${progress}%`;
   progressBar.setAttribute("aria-valuenow", progress);
+}
+
+/**
+ * Display the firework animation when the game is won.
+ */
+export function displayFireworks() {
+  for (let i = 0; i < 3; i++) {
+    // Create a new div element
+    const divElement = document.createElement('div');
+
+    // Add the "firework" class to the div element
+    divElement.className = 'firework';
+
+    // Append the div element to the body
+    document.body.appendChild(divElement);
+  }
 }
