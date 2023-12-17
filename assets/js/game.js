@@ -24,6 +24,7 @@ import {
   displayProgress,
   displayFireworks,
   displayWinGameModal,
+  displayGameOverModal,
 } from "./game-display.js";
 
 runGame();
@@ -151,10 +152,12 @@ function markAnswerWrong(answerButton) {
 function endGame() {
   // TODO: Display the game over modal
   // const gameOverModal = document.getElementById("gameOverModal");
-  alert("Game Over");
   setProgress(0);
   setCurrentTopic(null);
   setCurrentQuestion(null);
+  setTimeout(() => {
+    displayGameOverModal();
+  }, 1000);
 }
 
 /**

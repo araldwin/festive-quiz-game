@@ -111,3 +111,11 @@ export function displayWinGameModal() {
   // data-bs-backdrop="static" data-bs-keyboard="false"
   winGameModal.show();
 }
+
+/**
+ * Display the game over modal.
+ */
+export function displayGameOverModal() {
+  const gameOverModal = new bootstrap.Modal("#gameOverModal");
+  gameOverModal.show();
+}
