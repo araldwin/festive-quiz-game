@@ -36,13 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const music = document.getElementById("background-music");
   const soundWrapper = document.getElementById("sound-wrapper");
 
+  soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
+
   soundWrapper.addEventListener("click", function () {
     // Toggle between play and pause when the sound icon is clicked
     if (music.paused) {
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
+      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
       music.play();
     } else {
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
+      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
       music.pause();
     }
   });
