@@ -57,7 +57,7 @@ export const DATA = [
             "correctAnswer": "St. Stephen"
         },
         {
-            "question": "What colour suit did Santa wear until Coca Cola rebranded him in red",
+            "question": "What colour suit did Santa wear until Coca Cola rebranded him in red?",
             "answers": ["White", "Blue", "Purple", "Green"],
             "correctAnswer": "Green"
         }

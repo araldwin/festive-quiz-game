@@ -1,7 +1,19 @@
+
 /*
 The game stylesheet.
 Used for the styling of the game page.
 */
+
+
+/* variables */
+:root {
+    --primary-color: #96bccf;
+    --secondary-color: #a52626;
+    --quaternary-color: #38D2D2;
+    --gold: gold;
+    --orange: #ff781f;
+}
+
 
 body {
     margin: 0;
@@ -21,30 +33,30 @@ body {
     font-size: xx-large;
 }
 
-#btn-back {
-    height: 40px;
-    width: 80px;
-    border-style: none;
-}
 
-#btn-back:hover {
-    background-color: rgb(241, 21, 21);
-    border-color: gold;
+/* CSS */
+#answers .btn  {
+  width: 200px;
+  height: 80px;
+  font-weight: 500;
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #38D2D2;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
 
-}
-#answers .btn {
-    width: 200px;
-    height: 80px;
-    font-weight: 500;
-    color: rgba(62, 49, 49, 0.865);
-    border-width: 3px;
-    border-color: #12b103;
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
 }
 
 #answers .btn:hover {
-    background-color: #0d6e04;
-    color: rgb(241, 21, 21);
-    border-color: gold;
+    background-color: #5ba0c3;
 }
 
 #attempts {
@@ -52,9 +64,9 @@ body {
     padding-left: 5px;
     padding-right: 5px;
 }
-
-.progress {
-    margin-left: 25%;
+h3 {
+  margin-left: 25%;
+  margin-right: 15%;
 }
 
 .correct-answer:disabled {
@@ -73,36 +85,79 @@ body {
 #topic {
     font-size: xx-large;
     font-weight: bold;
+    color: #5ba0c3;
 }
 
 #question {
     font-size: x-large;
     margin-left: 10%;
     margin-right: 5%;
+    color: var(--secondary-color);
+}
+
+#questions-wrapper, #attempts-header {
+    color: var(--secondary-color);
+}
+
+.progress {
+  margin-left: 25%;
+  box-shadow: 0px 0px 10px 3px #93e0dbd8;
+}
+
+.progress-bar {
+  background-color: var(--quaternary-color);
 }
 
 #sleigh {
     margin-top: 8px;
     font-size: medium;
     padding-left: 5px;
+    color: var(--secondary-color);
 }
 #gifts {
     font-size: large;
-    background-color: #0d6e04;
-    width: 68px;
+    width: 65px;
     height: 40px;
     padding-top: 5px;
+    background-color: #b9efedde;
+    box-shadow: 0px 0px 10px 2px #8ce0da;
+}
+.fa-gifts {
+    color: var(--secondary-color);
 }
 
 
-/* Fireworks */
-/* https://jsfiddle.net/elin/7m3bL/ */
+#gameOverModalLabel {
+  margin-left: 35%;
+  font-weight: bolder;
+}
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #000;
-  overflow: hidden; }
+h6 {
+  padding-right: 20px;
+  font-weight: bolder;
+}
+
+#sad-smiley {
+  margin-left: 38%;
+  font-size: xx-large;
+}
+
+#btn-txt {
+  margin-right: 41%;
+}
+
+#winGameModalLabel {
+  margin-left: 32%;
+  font-weight: bolder;
+}
+
+#win-trophy {
+  margin-left: 38%;
+  font-size: xx-large;
+}
+
+/* ./Fireworks */
+/* https://jsfiddle.net/elin/7m3bL/ */
 
 .pyro > .before, .pyro > .after {
   position: absolute;
@@ -284,3 +339,4 @@ body {
     margin-top: 30%;
     margin-left: 80%; } }
 /* ./Fireworks */
+

@@ -1,95 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Festive Quiz Game, test your knowledge of Christmas trivia">
-  <meta name="keywords" content="festive, quiz, game, christmas, trivia game">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A Festive Quiz Game, test your knowledge of Christmas trivia"
+		/>
+		<meta
+			name="keywords"
+			content="festive, quiz, game, christmas, trivia game"
+		/>
 
-  <!-- Done: Add favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+		<!-- TODO: Add favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="images/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="images/favicon-16x16.png"
+		/>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
 
-  <!-- Font awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<!-- Font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/home.css">
-  <link rel="stylesheet" href="css/game.css">
 
-  <title>Festive Quiz Game</title>
-</head>
+		<title>Santa's Quiz Adventure!</title>
+	</head>
 
 	<body>
-		<!-- background video -->
-		<video autoplay muted loop playsinline class="background-video">
-		<source src="https://res.cloudinary.com/dhign8ar8/video/upload/v1702757927/festive_quiz_game_bg_gh38do.mp4" type="video/mp4">
-		</video>
+
+		<div class="d-flex position-absolute end-0 me-5 mt-5">
+			<button id="sound-wrapper" class="icon-btn user-centric">
+				<!-- switch to mute icon when clicked using JS  -->
+			</button>
+		</div>
 
 		<!-- hero section -->
 		<div class="home">
-			<nav>
-				<ul>
-					<span id="sound-wrapper">
-						<!-- switch to mute icon when clicked using JS  -->
-					</span>
-				</ul>
-			</nav>
-			<div class="content">
-				<h1>FESTIVE QUIZ GAME</h1>
-       	<button id="new-game-btn" class="btn" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">New Game</button>
-			<div>
-		</div>
+			<div class="content user-centric">
+				<h1>Santa's Quiz Adventure!</h1>
+       	  <button id="new-game-btn" class="btn" data-bs-target="#selectDifficultyModalToggle" data-bs-toggle="modal">Frosty Start</button>
+					<!-- Button trigger modal -->
+					<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#rulesModal">
+						Elfin Instructions
+					</button>
+				<div>
+			</div>
 
-		<!-- developer profile section -->
-		<div class="container fixed-bottom p-5">
-		<div class="row">
-			<div class="col">
-			<div class="wrapper">
-				<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/2.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
-			</div>
-			<div class="col">
-			<a href="#">
-				<img src="./assets/images/1.png" alt="" class="img-thumbnail img-fluid">
-				</a>
+				<!-- Our team section section -->
+			<div class="d-none align-items-end gap-3">
+				<div class="d-none d-lg-block" id="wrapper">
+					<div class="title text-center">
+						<h4
+							class="d-inline-flex p-4 text-secondary fw-bold text-uppercase border border-2 border-light rounded-pill"
+						>
+							Meet our Team
+						</h4>
+					</div>
+
+					<div
+						class="row card_Container justify-content-center align-items-center flex-wrap"
+					>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Aldwin Arriola <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 2">
+										<a href="https://github.com/araldwin" target="_blank"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Andreas Parides <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Peter Coates <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/2.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Jo Healy <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Pavlo Myskov <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Rohina Usman <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+						<div class="card col-lg-1">
+							<div class="img-box">
+								<img
+									src="./assets/images/1.png"
+									alt="image"
+									class="img-fluid"
+								/>
+							</div>
+
+							<div class="Content">
+								<div class="content-box">
+									<h3>
+										Emmanuel Oluwadare <br />
+										<span>Web Developer</span>
+									</h3>
+								</div>
+								<ul class="icon">
+									<li style="--i: 1">
+										<a href="#"
+											><i class="fa-solid fa-paper-plane" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 2">
+										<a href="#"
+											><i class="fa-brands fa-github" target="_blank"></i
+										></a>
+									</li>
+									<li style="--i: 3">
+										<a href="#"
+											><i class="fa-brands fa-linkedin-in" target="_blank"></i
+										></a>
+									</li>
+								</ul>
+								<img class="Img" src="" alt="image" />
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		</div>
-	</div>
 
 	<!-- Audio -->
 	<audio id="background-music" loop>
@@ -97,52 +346,13 @@
 		Your browser does not support the audio tag.
 	</audio>
 
-<!-- Modal -->
- <div class="modal fade" id="selectDifficultyModalToggle" aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel"
- tabindex="-1">
- <div class="modal-dialog modal-dialog-centered">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div class="modal-body text-center">
-       <button class="btn btn-info w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="easy">
-         Jingle Bells Level
-       </button>
-       <button class="btn btn-warning w-75 my-2 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="medium">
-         Frosty the Snowman Level
-       </button>
-       <button class="btn btn-danger w-75 difficulty-btn" data-bs-target="#selectTopicModalToggle" data-bs-toggle="modal" data-difficulty="hard">
-         Santa's Workshop Challenge
-       </button>
-     </div>
-   </div>
- </div>
-</div>
-<div class="modal fade" id="selectTopicModalToggle" aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel"
- tabindex="-1">
- <div class="modal-dialog modal-dialog-centered">
-   <div class="modal-content">
-     <div class="modal-header">
-       <h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>
-     <div id="topic-list" class="modal-body text-center">
-       <!-- Use JS to populate the topics. See assets/js/game-display.js -> displayAvailableTopics -->
-     </div>
-   </div>
- </div>
-</div>
-<!-- ./Modal -->
+	<!-- Modals wrapper -->
+	<div id="modals-container">
+		<!-- Use JS to populate the modals here -->
+	</div>
 
-  <!--
-  Snowflakes
-  Functionality in assets/js/script.js
-
-  Credits:
-  https://github.com/hcodes/snowflakes/
-  -->
+  <!-- Snowflakes Functionality in assets/js/script.js
+  Credits: https://github.com/hcodes/snowflakes/ -->
   <div id="snowflakes-container"></div>
   <script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
 
@@ -155,8 +365,9 @@
 
   <!-- Custom JS -->
   <script type="module" src="assets/js/game-storage.js"></script>
-  <script type="module" src="assets/js/snowflakes.js"></script>
-  <script type="module" src="assets/js/script.js"></script>
   <script type="module" src="assets/js/home.js"></script>
+  <script type="module" src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/modals.js"></script>
+  <script type="module" src="assets/js/homeSnowflakes.js"></script>
 	</body>
 </html>

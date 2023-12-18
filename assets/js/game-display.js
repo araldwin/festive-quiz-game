@@ -2,7 +2,7 @@
 This module contains functions to display the game.
 */
 
-import { stopSnowflakes } from "./snowflakes.js";
+import { stopSnowflakes } from "./gameSnowflakes.js";
 
 /**
  * Display the available topics in the game.
@@ -120,7 +120,26 @@ export function displayFireworks() {
  * Display the win game modal.
  */
 export function displayWinGameModal() {
+  stopSnowflakes();
+
   const winGameModal = new bootstrap.Modal("#winGameModal");
+  const winGameModalHeader = document.getElementById("winGameModalLabel");
+  const congratulationsArray = [
+    "Merry Celebrations!",
+    "Jingle Jolly, You Did It!",
+    "Ho-Ho-Hooray!",
+    "Santa's Salutations!",
+    "Festive Felicitations!",
+    "Yuletide Triumph!",
+    "Congrats with Bells On!",
+    "Snowy Success!",
+    "Cheers to You!",
+    "Bravo, Jolly Elf!"
+  ];
+  // set a random congratulations message
+  winGameModalHeader.textContent = congratulationsArray[
+    Math.floor(Math.random() * congratulationsArray.length)
+  ];
   winGameModal.show();
 }
 
@@ -128,7 +147,27 @@ export function displayWinGameModal() {
  * Display the game over modal.
  */
 export function displayGameOverModal() {
-  const gameOverModal = new bootstrap.Modal("#gameOverModal");
   stopSnowflakes();
+
+  const gameOverModal = new bootstrap.Modal("#gameOverModal");
+  const gameOverModalHeader = document.getElementById("gameOverModalLabel");
+
+  const gameOverArray = [
+    "Festive Failure! Game Over!",
+    "Better Luck Next Time!",
+    "The Adventure Ends Here.",
+    "Santa's Sleigh Got Stuck!",
+    "Reindeer Rest Time!",
+    "Snowy Setback, Game Over!",
+    "Oops! Try Again!",
+    "The Bells Have Tolled, Game Over!",
+    "Elves Need a Break!"
+  ];
+
+  // set a random game over message
+  gameOverModalHeader.textContent = gameOverArray[
+    Math.floor(Math.random() * gameOverArray.length)
+  ];
+
   gameOverModal.show();
 }
