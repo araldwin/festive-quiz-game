@@ -4,6 +4,12 @@ Used init bootstrap tooltips, popovers and modals throughout the site.
 */
 
 import {
+  addDifficultyModal,
+  addRulesModal,
+  addTopicModal,
+} from "./modals.js";
+
+import {
   setDifficulty,
   getAvailableTopics,
   setCurrentTopicByName,
@@ -15,19 +21,39 @@ document.addEventListener("DOMContentLoaded", function () {
   const music = document.getElementById("background-music");
   const soundWrapper = document.getElementById("sound-wrapper");
 
-  soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
+  soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute"></i>`;
 
   soundWrapper.addEventListener("click", function () {
     // Toggle between play and pause when the sound icon is clicked
     if (music.paused) {
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up" style="color: #17bf07;"></i>`;
+      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-up"></i>`;
       music.play();
     } else {
-      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute" style="color: #17bf07;"></i>`;
+      soundWrapper.innerHTML = `<i class="fas fa-l fa-volume-mute"></i>`;
       music.pause();
     }
   });
   // ./Sound
+
+
+  // Check current page
+  // If the current page is the game page, the button closes the modal
+  // Otherwise, the button opens new difficulty modal
+  const currentPage = window.location.pathname.split("/").pop();
+  let rulesModalBtn;
+  if (currentPage === "game.html") {
+    rulesModalBtn = '<button type="button" class="btn btn-info" data-bs-dismiss="modal">Got the North Pole Gist!</button>';
+  } else {
+    rulesModalBtn = `<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#selectDifficultyModalToggle">Ho-Ho Hurry!</button>`;
+  }
+
+  // Add modals to the page
+  addRulesModal(rulesModalBtn);
+  addDifficultyModal();
+  addTopicModal();
+
+  //
+
 
   // Get the difficulty buttons
   const difficultyButtons = document.querySelectorAll(".difficulty-btn");
