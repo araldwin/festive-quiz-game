@@ -159,7 +159,6 @@ function markAnswerWrong(answerButton) {
  */
 function endGame() {
   displayQuestionCount(-1);
-  console.log(getCurrentTopicObj().questions.length);
   setProgress(0);
   setCurrentTopic(null);
   setCurrentQuestion(null);

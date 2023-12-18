@@ -2,6 +2,7 @@
 This module contains functions to display the game.
 */
 
+import { stopSnowflakes } from "./gameSnowflakes.js";
 
 /**
  * Display the available topics in the game.
@@ -20,7 +21,6 @@ export function displayAvailableTopics(availableTopics) {
 
   topicList.innerHTML = topicListHTML;
 }
-
 
 /**
  * Display the current topic in the game.
@@ -71,11 +71,10 @@ export function displayQuestionCount(questionCount) {
  * Display the number of attempts in the game, based on the difficulty level.
  */
 export function displayAttempts(attemptsNumber) {
-  const attemptsWrapper= document.getElementById("attempts");
+  const attemptsWrapper = document.getElementById("attempts");
   const attemptEl = `<i class="fa-solid fa-cookie fa-beat fa-lg" style="color: #ff781f;"></i>`;
   attemptsWrapper.innerHTML = attemptEl.repeat(attemptsNumber);
 }
-
 
 /**
  * Display the progress bar in the game.
@@ -90,24 +89,57 @@ export function displayProgress(progress) {
  * Display the firework animation when the game is won.
  */
 export function displayFireworks() {
-  for (let i = 0; i < 3; i++) {
-    // Create a new div element
-    const divElement = document.createElement('div');
+  stopSnowflakes();
 
-    // Add the "firework" class to the div element
-    divElement.className = 'firework';
+  // Create div elements
+  const parentDivElement = document.createElement("div");
+  const firstChildDivElement = document.createElement("div");
+  const secondChildDivElement = document.createElement("div");
 
-    // Append the div element to the body
-    document.body.appendChild(divElement);
-  }
+  // Add the "firework" class to the div element
+  parentDivElement.className = "pyro";
+
+  // Add the "before" class to the div element
+  firstChildDivElement.className = "before";
+
+  // Add the "after" class to the div element
+  secondChildDivElement.className = "after";
+
+  // Add child div elements to the parent div element
+  parentDivElement.appendChild(firstChildDivElement);
+  parentDivElement.appendChild(secondChildDivElement);
+
+  // Get the first child of the body
+  const firstChildOfBody = document.body.firstChild;
+
+  // Insert the div element before the first child of the body
+  document.body.insertBefore(parentDivElement, firstChildOfBody);
 }
 
 /**
  * Display the win game modal.
  */
 export function displayWinGameModal() {
+  stopSnowflakes();
+
   const winGameModal = new bootstrap.Modal("#winGameModal");
-  // data-bs-backdrop="static" data-bs-keyboard="false"
+  const winGameModalHeader = document.getElementById("winGameModalLabel");
+  const congratulationsArray = [
+    "Merry Celebrations!",
+    "Jingle Jolly, You Did It!",
+    "Ho-Ho-Hooray!",
+    "Santa's Salutations!",
+    "Festive Felicitations!",
+    "Yuletide Triumph!",
+    "Congrats with Bells On!",
+    "Snowy Success!",
+    "Cheers to You!",
+    "Bravo, Jolly Elf!"
+  ];
+  // set a random congratulations message
+  winGameModalHeader.textContent = congratulationsArray[
+    Math.floor(Math.random() * congratulationsArray.length)
+  ];
   winGameModal.show();
 }
 
@@ -115,6 +147,31 @@ export function displayWinGameModal() {
  * Display the game over modal.
  */
 export function displayGameOverModal() {
+  stopSnowflakes();
+
   const gameOverModal = new bootstrap.Modal("#gameOverModal");
+  const gameOverModalHeader = document.getElementById("gameOverModalLabel");
+
+  const gameOverArray = [
+    "Festive Failure! Game Over!",
+    "Better Luck Next Time!",
+    "The Adventure Ends Here.",
+    "Santa's Sleigh Got Stuck!",
+    "Reindeer Rest Time!",
+    "Snowy Setback, Game Over!",
+    "Oops! Try Again!",
+    "The Bells Have Tolled, Game Over!",
+    "Elves Need a Break!"
+  ];
+
+  // set a random game over message
+  gameOverModalHeader.textContent = gameOverArray[
+    Math.floor(Math.random() * gameOverArray.length)
+  ];
+
   gameOverModal.show();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> upstream/main

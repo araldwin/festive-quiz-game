@@ -4,22 +4,34 @@ Used for the general styling of the site eg. main font, etc.
 and for shared elements between the home page and the game page, eg. game rules modal, etc.
 */
 
-/*
-FIXME: Change to bootstrap modal
-.modal {
-    text-align: center;
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #228B22;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-family: 'Georgia', serif;
+/* Google */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+body {
+    font-family: 'Berkshire Swash';
 }
-*/
+
+/* User-centric key foreground elements */
+.user-centric {
+    z-index: 999;
+    position: relative;
+}
+
+/* Icon buttons */
+.icon-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    color: #1da3a3;
+}
+
+.icon-btn i:hover {
+    background-color: transparent;
+    transform: scale(1.07);
+    color: #11b3b3;
+    transition: transform 0.2s ease-in-out;
+}
+/* ./Icon buttons */
