@@ -8,12 +8,10 @@
 	<meta name="keywords"
 		content="festive, quiz, game, christmas, trivia game" />
 
-	<!-- TODO: Add favicon -->
-	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="images/favicon-32x32.png" />
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="images/favicon-16x16.png" />
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
 	<!-- Bootstrap CSS -->
 	<link
@@ -36,14 +34,11 @@
 <body>
 	<!-- hero section -->
 	<div class="home">
-		<nav>
-			<ul>
-				<span id="sound-wrapper">
-					<!-- switch to mute icon when clicked using JS  -->
-				</span>
-			</ul>
-		</nav>
-
+		<div class="position-absolute top-0 end-0 m-5">
+			<span id="sound-wrapper" class="icon-btn user-centric">
+				<!-- switch to mute icon when clicked using JS  -->
+			</span>
+		</div>
 		<div class="content">
 			<h1>Santa's Quiz Adventure!</h1>
 			<button id="new-game-btn" class="btn"
