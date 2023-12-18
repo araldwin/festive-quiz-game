@@ -2,9 +2,9 @@
 
 # Test Cases
 
-| ID | Test Subject | Steps Taken | Outcome Generated |
-|----|--------------|-------------|-------------------|
-| 01 | Home page background | Check appearance of background | Background image is clear and snowfake effect is working |
+| ID | Test Subject | Steps Taken | Outcome Generated | Screenshot |
+|----|--------------|-------------|-------------------| ---------- |
+| 01 | Home page background | Check appearance of background | Background image is clear and snowfake effect is working | <img src="testing.docs/test-case1.jpg" width=200 height=200>
 | 02 | Game Title | Check appearance of title | Title is clearly legible and appropriately positioned |
 | 03 | Music Button | Check appearance and click button | Music plays when button is clicked, music stops when button is clicked again |
 | 04 | Elfin Instructions Button | Check appearance and click button | Font is clearly legible, instruction modal appears when button is clicked |
