@@ -10,3 +10,9 @@ and for shared elements between the home page and the game page, eg. game rules 
 body {
     font-family: 'Berkshire Swash';
 }
+
+/* User-centric key foreground elements */
+.user-centric {
+    z-index: 999;
+    position: relative;
+}
