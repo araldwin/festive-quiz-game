@@ -219,7 +219,7 @@ export const DATA = [
         },
         {
             "question": "What beverage is often referred to as the Christmas Ale in many parts of the world?",
-            "answers": ["Eggnog", "Bucksfizz", "Mulled wine", "Baileys"],
+            "answers": ["Eggnog", "Bucksfizz", "Mulled Wine", "Baileys"],
             "correctAnswer": "Mulled Wine"
         },
         {
