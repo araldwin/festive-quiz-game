@@ -29,3 +29,7 @@
 export function stopSnowflakes() {
   snowflakes.stop();
 }
+
+export function destroySnowflakes() {
+  snowflakes.destroy();
+}

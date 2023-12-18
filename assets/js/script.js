@@ -9,12 +9,15 @@ import {
   addTopicModal,
 } from "./modals.js";
 
+
 import {
   setDifficulty,
   getAvailableTopics,
   setCurrentTopicByName,
 } from "./game-storage.js";
 import { displayAvailableTopics } from "./game-display.js";
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Sound
