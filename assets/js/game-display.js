@@ -170,8 +170,4 @@ export function displayGameOverModal() {
   ];
 
   gameOverModal.show();
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> upstream/main
