@@ -3,7 +3,9 @@
 [Click for live view](https://flashdrag.github.io/festive-quiz-game/)
 
 
+<!-- The website picture here -->
 
+<img src="assets/readme.docs/Screenshot 2023-12-18 at 21.49.36.png" width="860" alt="image-from-Am-I-responsive">
 
 ## Table of Contents
 <details><summary>Click to go to Contents here </summary>
