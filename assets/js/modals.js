@@ -44,7 +44,11 @@ export function addDifficultyModal () {
   modalsContainer.appendChild(modal);
 }
 
-export function addRulesModal() {
+/**
+ * Add the rules modal to the page.
+ * @param {string} buttonString - The button to be displayed in the modal footer depending on the page.
+ */
+export function addRulesModal(buttonString) {
 
   const modalsContainer = document.getElementById("modals-container");
   const modal = document.createElement("div");
@@ -62,7 +66,7 @@ export function addRulesModal() {
         <div class="modal-body">
           <h5>Mission:</h5>
           <p>
-            Help Santa and his magical sleigh reach the North Pole by answering Christmas-themed questions correctly.
+            Help Santa and his magical sleigh deliver presents to children around the world by answering Christmas-themed questions correctly.
             The journey is filled with joy and challenges, so put on your thinking cap and spread the holiday spirit!
           </p>
 
@@ -71,26 +75,30 @@ export function addRulesModal() {
           <ul class="rule-markers">
             <li>
               Choose a difficulty level: Easy, Medium, or Hard.
-              Each setting represents the magical journey's intensity and the number of lives Santa has.
+              Each setting represents the magical journey's intensity and the number of cookies Santa has.
               <ul class="list-unstyled">
-                <li>🌟 Easy: 3 lives</li>
-                <li>🌲 Medium: 2 lives</li>
-                <li>❄️ Hard: 1 life</li>
+                <li>🌟 Jingle Bells Level: 3 cookies</li>
+                <li>🌲 Frosty the Snowman Level: 2 cookies</li>
+                <li>❄️ Santa's Workshop Challenge: 1 cookie</li>
               </ul>
             </li>
             <li>
               Answer questions correctly to advance Santa and his sleigh along the progress bar.
-              The more questions you get right, the closer Santa gets to the enchanting North Pole.
+              The more questions you get right, the closer Santa gets to his destination!
             </li>
             <li>
-              But beware! Incorrect answers may cost Santa precious lives(deers).
-              Keep an eye on the remaining lives, and don't let them run out before reaching the North Pole!
+              You have a total of 10 questions per game.
+              So use them wisely to make Santa's journey memorable.
+            </li>
+            <li>
+              But beware! Incorrect answers may cost Santa precious cookies.
+              Keep an eye on the remaining cookies, and don't let them run out before Santa reaches one of his homes.
             </li>
           </ul>
 
         </div>
         <div class="modal-footer d-flex justify-content-center">
-          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#selectDifficultyModalToggle">Ho-Ho Hurry!</button>
+          ${buttonString}
         </div>
       </div>
     </div>
