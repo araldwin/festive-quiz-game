@@ -18,8 +18,6 @@
     rotation: true, // Default: true
     speed: 1, // The property affects the speed of falling. Default: 1
     wind: true, // Without wind. Default: true
-    width: 500, // Default: width of container
-    height: 500, // Default: height of container
     zIndex: 100, // Default: 9999,
     autoResize: true // Default: true
 });
