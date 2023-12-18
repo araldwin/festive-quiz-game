@@ -4,6 +4,12 @@ Used init bootstrap tooltips, popovers and modals throughout the site.
 */
 
 import {
+  addDifficultyModal,
+  addRulesModal,
+  addTopicModal,
+} from "./modals.js";
+
+import {
   setDifficulty,
   getAvailableTopics,
   setCurrentTopicByName,
@@ -28,6 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   // ./Sound
+
+
+  // Add modals to the page
+  addDifficultyModal();
+  addRulesModal();
+  addTopicModal();
+
 
   // Get the difficulty buttons
   const difficultyButtons = document.querySelectorAll(".difficulty-btn");
