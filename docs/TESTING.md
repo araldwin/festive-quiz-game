@@ -40,7 +40,7 @@
 | 33 | Win Game Buttons | Check appearance and click buttons | Buttons are clearly legible. Yes button returns to difficulty selection, No button returns to homepage with no continue button | [View](testing.docs/test-case13.jpg)
 | 34 | Meet Our Team | Check appearance of profiles | | |
 | 35 | Meet Our Team Social Media Links | Click all social media links | | |
-| 36 | Meet Our Team Title | | |
+| 36 | Meet Our Team Title | |
 
 # Validation
 

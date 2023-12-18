@@ -225,14 +225,30 @@ These colors are all reflected in the background image.
 
 See testing documentation [here](docs/TESTING.md)
 
-## Manual testing
-
-
-
 ## Deployment
 
-  ### Github Pages
+### Github Pages
+#### Fork a Repository
+1. Find the repository you want to fork
+2. Find the 'Fork' button to create a new fork
+3. When creating the fork, the name and description can be changed
+4. Click 'Create fork'
 
+#### Clone a Repository
+1. Go to the repository you want to clone
+2. Click 'code' and copy the URL
+3. Open a new workspace in your IDE
+4. In a new terminal use the command '$ git clone [your-fork-repository-url]'
+5. Create an Upstream branch to be able to sync with main version of the project
+6. Use command '$ git remote add upstream [main-repository-url]'
+7. To sync, use commands '$ git fetch upstream' and '$ git merge upstream/main'
+
+#### Deploy
+1. Go to settings in the Github repository
+2. Find 'Pages' in the list on the left side of the page
+3. Under the section 'Source', choose 'Deploy from Branch'
+4. Under 'Branch', choose 'Main' and then save
+5. The link to the website will appear at the top of this page once it is ready. It may take a couple of minutes.
 
 
 ## Credits
