@@ -223,9 +223,7 @@ These colors are all reflected in the background image.
 
 ## Testing
 
-### Validator Testing
-
-
+See testing documentation [here](docs/TESTING.md)
 
 ## Manual testing
 
