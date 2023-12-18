@@ -1,7 +1,8 @@
   // Add the continue button if there is a current topic
 
 import { getCurrentTopicObj } from "./game-storage.js";
-
+import { stopSnowflakes, destroySnowflakes } from "./homeSnowflakes.js";
+import { stopSnowflakes as stopSnowflakesGame, destroySnowflakes as destroySnowflakesGame } from "./gameSnowflakes.js";
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -21,4 +22,25 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "game.html";
     });
   }
+
+  let screenWidth = window.innerWidth;
+
+  // Stop the snowflakes animation on mobile devices
+  if (screenWidth < 768) {
+    stopSnowflakes();
+    stopSnowflakesGame();
+  }
+
+  // handle window resize and stop snowflakes animation on mobile devices
+  window.addEventListener("resize", () => {
+    screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      stopSnowflakes();
+      destroySnowflakes();
+      stopSnowflakesGame();
+      destroySnowflakesGame();
+    }
+  });
+
+
 });
