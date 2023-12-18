@@ -33,7 +33,7 @@
     <div id="navbar" class="row ">
       <div class="col-4 px-4">
         <a href="index.html" class="icon-btn user-centric">
-          <i class="fa-solid fa-circle-arrow-left fa-l" style="color: #17bf07;"></i>
+          <i class="fa-solid fa-circle-arrow-left fa-l"></i>
         </a>
       </div>
 
@@ -42,7 +42,7 @@
           <!-- switch to mute icon when clicked using JS  -->
         </button>
         <button id="rulesButton" type="button" class="px-2 icon-btn user-centric" data-bs-toggle="modal" data-bs-target="#rulesModal">
-          <i class="fas fa-l fa-question-circle" style="color: #17bf07;"></i>
+          <i class="fas fa-l fa-question-circle"></i>
         </button>
       </div>
     </div>
@@ -69,17 +69,17 @@
       <!-- Attempts -->
       <div class="row">
         <div class="col">
-          <h3 class="text-center user-centric">
-            Attempts:
+          <h3 id="attempts-wrapper" class="text-center user-centric">
+            <span id="attempts-header">Attempts:</span>
             <span id="attempts">
               <!-- Use JS to update the number of attempts with id="attemts" -->
             </span>
           </h3>
         </div>
         <div class="col">
-          <h3 class="text-center user-centric">
-            <span class="user-centric">Questions:</span>
-            <span id="question-count">
+          <h3 id="questions-wrapper" class="text-center user-centric">
+            <span class="user-centric" id="questions-header">Questions:</span>
+            <span id="question-count" class="fa-solid fa-beat">
               <!-- Use JS to update the number of questions with id="questionNumber" -->
             </span>
         </div>
@@ -91,16 +91,16 @@
         <div class="col-10">
           <!-- To update bar use class="progress-bar". Update the aria-valuenow and style="width: "-->
           <div class="progress user-centric" style="height: 35px;">
-            <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar"
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
               style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
             </div>
             <span id="sleigh">
-              <i class="fa-solid fa-sleigh fa-2xl" style="color: #fc0717f7;"></i>
+              <i class="fa-solid fa-sleigh fa-2xl"></i>
             </span>
           </div>
         </div>
         <div id="gifts" class="col-2 user-centric">
-          <i class="fa-solid fa-gifts fa-2xl" style="color: #f80707f7;"></i>
+          <i class="fa-solid fa-gifts fa-2xl"></i>
         </div>
 
       </div>

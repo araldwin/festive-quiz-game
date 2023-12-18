@@ -25,12 +25,13 @@ body {
     outline: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    color: #1da3a3;
 }
 
 .icon-btn i:hover {
     background-color: transparent;
     transform: scale(1.07);
-    color: #1cc70c !important;
+    color: #11b3b3;
     transition: transform 0.2s ease-in-out;
 }
 /* ./Icon buttons */
