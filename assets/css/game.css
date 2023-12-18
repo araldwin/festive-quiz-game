@@ -4,20 +4,24 @@ The game stylesheet.
 Used for the styling of the game page.
 */
 
-
 /* variables */
 :root {
-    --primary-color: #96bccf;
-    --secondary-color: #a52626;
-    --quaternary-color: #38D2D2;
-    --gold: gold;
-    --orange: #ff781f;
+  --primary-color: #96bccf;
+  --secondary-color: #a52626;
+  --quaternary-color: #38D2D2;
+  --gold: gold;
+  --orange: #ff781f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 
 body {
-    margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
 .game-image {
@@ -27,12 +31,16 @@ body {
     background-size: cover;
 }
 
-#navbar {
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: xx-large;
+#topic {
+  font-size: xx-large;
+  font-weight: bold;
+  color: #5ba0c3;
 }
 
+#question {
+  font-size: x-large;
+  color: var(--secondary-color);
+}
 
 /* CSS */
 #answers .btn  {
@@ -45,9 +53,7 @@ body {
   background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
   box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
   border-radius: 14px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -64,10 +70,6 @@ body {
     padding-left: 5px;
     padding-right: 5px;
 }
-h3 {
-  margin-left: 25%;
-  margin-right: 15%;
-}
 
 .correct-answer:disabled {
     /* TODO: style the correct answer button */
@@ -82,25 +84,16 @@ h3 {
     border-color: gold;
 }
 
-#topic {
-    font-size: xx-large;
-    font-weight: bold;
-    color: #5ba0c3;
-}
-
-#question {
-    font-size: x-large;
-    margin-left: 10%;
-    margin-right: 5%;
-    color: var(--secondary-color);
-}
-
 #questions-wrapper, #attempts-header {
     color: var(--secondary-color);
 }
 
+
+.progress-wrapper {
+    max-width: 830px;
+}
+
 .progress {
-  margin-left: 25%;
   box-shadow: 0px 0px 10px 3px #93e0dbd8;
 }
 
@@ -117,7 +110,7 @@ h3 {
 #gifts {
     font-size: large;
     width: 65px;
-    height: 40px;
+    height: 33px;
     padding-top: 5px;
     background-color: #b9efedde;
     box-shadow: 0px 0px 10px 2px #8ce0da;
@@ -155,6 +148,7 @@ h6 {
   margin-left: 38%;
   font-size: xx-large;
 }
+
 
 /* ./Fireworks */
 /* https://jsfiddle.net/elin/7m3bL/ */
