@@ -78,9 +78,30 @@
 ### script.js
 ![testing-script js](https://github.com/Josephine2244/festive-quiz-game/assets/137813807/6cdddcbc-1914-4448-88d1-806624d38520)
 
+### game.css
+
+No warnings - [View](testing.docs/testing-game.css.jpg)
+
+### home.css
+No warnings - [View](testing.docs/testing-home.css.jpg)
+
+### team.css
+No warnings - [View](testing.docs/testing-team.css.jpg)
+
+### index.html
+
+### game.html
+
+### team.html
+
+
 # Bug Reports
 
-## 1. 
+### 1. 
 Bug: When user returned to the home page from the game page, the continue button allowed the user to continue the game, even if the user had already finished the game.
 Fix: The continue button is removed dynamically immediately when the user starts a new game
+
+### 2.
+Bug: On small devices the screen twitches due to the snow going beyond the screen
+Fix: Unfixed
 
