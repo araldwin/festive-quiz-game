@@ -22,23 +22,6 @@ body {
     font-size: xx-large;
 }
 
-
-.icon-btn {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    outline: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.icon-btn i:hover {
-    background-color: transparent;
-    transform: scale(1.07);
-    color: #1cc70c !important;
-    transition: transform 0.2s ease-in-out;
-}
-
 #answers .btn {
     width: 200px;
     height: 80px;
