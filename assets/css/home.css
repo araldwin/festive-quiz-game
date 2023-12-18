@@ -11,6 +11,20 @@ body {
 	overflow: hidden;
 }
 
+
+/* Sound icon */
+#sound-wrapper i {
+	font-size: 3rem;
+	color: #fff8e1;
+	transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#sound-wrapper i:hover {
+	cursor: pointer;
+	transform: scale(0.9);
+	color: #c6c6c6;
+}
+
 /* hero section style */
 .home {
 	width: 100vw;
