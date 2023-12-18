@@ -273,6 +273,3 @@ These colors are all reflected in the background image.
 
 
 
-
-
-
