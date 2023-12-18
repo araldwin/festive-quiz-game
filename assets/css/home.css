@@ -8,26 +8,27 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	overflow: hidden; /* Prevent scrolling if the video overflows */
 }
-
 
 /* Sound icon */
 #sound-wrapper i {
 	font-size: 2rem;
-	color: #5ECDEF;
+	color: #00ff00;
+	transition: transform 0.2s ease, color 0.2s ease;
 }
 
 #sound-wrapper i:hover {
 	cursor: pointer;
+	transform: scale(0.9);
+	color: #00cc00;
 }
 
 /* hero section style */
 .home {
-
 	width: 100vw;
 	height: 100vh;
-	background: url(/assets/images/santa-background-optimized.jpg) no-repeat center center/cover;
+	background: url(/assets/images/santa-background-optimized.jpg) no-repeat
+		center center/cover;
 	padding: 5% 5%;
 	display: flex;
 	flex-direction: column;
@@ -63,33 +64,38 @@ nav ul {
 	width: 50%;
 	position: absolute;
 	right: 25%;
-	bottom: 35%;
 }
 
 .content h1 {
 	font-size: 50px;
 	color: #ffffff;
 	margin-bottom: 50px;
-	text-shadow: 10px 2px 1px #83929C;
+	text-shadow: 2px 2px 4px #83929c;
 }
 
 .content button {
 	color: #ffffff;
 	font-weight: bold;
 	border: 2px solid #ffffff;
-	padding: 15px 50px;
+	padding: 15px 30px;
 	border-radius: 50px;
 	margin-top: 10px;
 	transition: border-color 0.3s, color 0.3s;
-	text-shadow: 2px 2px 4px #83929C;
-	margin: 10px 10px;
-	width: 45%;
+	text-shadow: 2px 2px 4px #83929c;
+	margin: 0 10px;
 }
 
+.content-button {
+	border-color: #00ff00;
+	box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00,
+		inset 0 0 10px #00ff00, inset 0 0 20px #00ff00, inset 0 0 30px #00ff00;
+	transition: border-color 0.3s, color 0.3s;
+	animation: pulse 2s infinite;
+}
 
 .content button:hover {
-	color: #83929C;
-	border-color: #83929C;
+	color: #83929c;
+	border-color: #83929c;
 	border-width: 3px;
 	font-size: larger;
 }
@@ -130,24 +136,22 @@ nav ul {
 }
 
 .card_Container .card {
-	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 250px;
 	height: 380px;
 	margin: 20px;
 	overflow: hidden;
-	/* box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1),
-		inset 0 0 0 1000px rgba(67, 52, 109, 0.6); */
+	box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 1), inset 0 0 0 1000px #afbcc586;
 	border-radius: 15px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	perspective: 1000px;
+	perspective-origin: 50% 50%;
 }
 
 .card .img-box {
 	width: 250px;
-	height: 380px;
-	position: relative;
-	overflow: hidden;
+	height: 370px;
 	background-position: center;
 	background-size: cover;
 	border-radius: 10px;
@@ -158,63 +162,87 @@ nav ul {
 }
 
 .Img {
+	display: flex;
+	justify-content: center;
+	position: absolute;
 	width: 250px;
-	height: 290px;
+
+	aspect-ratio: 3 / 4;
 	background-size: cover;
 	background-position: center;
 	pointer-events: none;
 	transform: translate3d(0px, 0px, 0px) scale(1);
 	transition: 500ms ease;
 	transform-origin: bottom;
-	z-index: 10;
+	z-index: 0;
+	opacity: 0;
+}
+
+.Img .Content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+	width: 100%;
+	height: 60px;
+	filter: blur(13px);
 	opacity: 1;
+	transition: opacity 500ms ease;
+	background: #ffffff;
 }
 
 .card .Content {
 	position: absolute;
-	bottom: -160px;
+	left: 0;
+	right: 0;
+	bottom: -20px;
 	width: 100%;
-	height: 160px;
+	height: 150px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	backdrop-filter: blur(15px);
-	box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	border-radius: 15px;
+
 	transition: bottom 0.5s;
 	transition-delay: 0.65s;
+	opacity: 1;
+	transition: opacity 500ms ease;
 }
 
 .card:hover .Content {
+	backdrop-filter: blur(10px);
+	box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
 	bottom: 0;
 	transition-delay: 0s;
 }
 
 .img-box:hover {
 	box-shadow: 0px 50px 50px #000000cc;
-	transform: translate3d(0px, 0px, 50px) rotate3d(1, 0, 0, 55deg);
-	filter: brightness(30%);
+	transform: translate3d(0px, 0px, 25px) rotate3d(1, 0, 0, 55deg);
+	filter: brightness(25%);
 }
-.img-box:hover ~ .img {
-	transform: translate3d(0px, -50px, 50px) scale(1.2);
+.img-box:hover ~ .Img {
+	transform: translate3d(0px, -50px, 50px) scale(0.9);
 	opacity: 1;
 }
 
 .Content .content-box h3 {
 	text-transform: uppercase;
 	color: #fff;
-	letter-spacing: 2px;
-	font-weight: 500;
-	font-size: 18px;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	font-weight: 400;
+	font-size: 22px;
 	text-align: center;
 	margin: 20px 0 15px;
-	line-height: 1.1em;
+	line-height: 1.4;
 	transition: 0.5s;
 	transition-delay: 0.6s;
 	opacity: 0;
 	transform: translateY(-20px);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 6px rgba(255, 255, 255, 0.8);
 }
 
 .card:hover .Content .content-box h3 {
@@ -223,9 +251,17 @@ nav ul {
 }
 
 .Content .content-box h3 span {
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 300;
-	text-transform: initial;
+	font-style: italic;
+	display: inline-block;
+	margin-top: 8px;
+	transition: transform 0.2s ease;
+}
+
+.Content .content-box h3:hover,
+.Content .content-box h3:hover span {
+	transform: translateY(-3px);
 }
 
 .Content .icon {
@@ -241,6 +277,22 @@ nav ul {
 	transition: 0.5s;
 	opacity: 0;
 	transition-delay: calc(0.2s * var(--i));
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	--blue: #0077b5;
+	--green: #28a745;
+	--red: #bd2c00;
+}
+
+.Content .icon li:nth-child(3) a i.fa-brands.fa-linkedin-in {
+	color: var(--blue);
+}
+
+.Content .icon li:nth-child(1) a i.fa-solid.fa-paper-plane {
+	color: var(--green);
+}
+
+.Content .icon li:nth-child(2) a i.fa-brands.fa-github {
+	color: var(--red);
 }
 
 .card:hover .Content .icon li {
@@ -249,9 +301,15 @@ nav ul {
 }
 
 .Content .icon li a {
-	color: #fff;
+	text-decoration: none;
+	transition: transform 0.2s ease;
 	font-size: 24px;
 }
+
+.Content .icon li a:hover {
+	transform: scale(0.9);
+}
+
 .icon {
 	display: flex;
 	justify-content: center;
@@ -279,10 +337,6 @@ nav ul {
 	transition: background-color 0.3s ease;
 }
 
-.icon li a:hover {
-	color: #ddd;
-}
-
 /* animation */
 @keyframes pulse {
 	0% {
@@ -304,29 +358,7 @@ nav ul {
 
 	/* Background Image */
 	.home {
-		background: url(/assets/images/santa-background-optimized.jpg) no-repeat left center/cover;
-	}
-
-	.content {
-		bottom: 34%;
-	}
-}
-
-@media (max-width: 431px) {
-
-	.content {
-		bottom: 26%;
-	}
-
-	.content button {
-		width: 100%;
-	}
-}
-
-@media (max-width: 281px) {
-	.content {
-		right: 25%;
-		bottom: 10%;
-		width: 66%;
+		background: url(/assets/images/santa-background-optimized.jpg) no-repeat
+			left center/cover;
 	}
 }
