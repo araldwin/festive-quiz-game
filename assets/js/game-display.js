@@ -2,7 +2,7 @@
 This module contains functions to display the game.
 */
 
-import { stopSnowflakes } from "./snowflakes.js";
+import { stopSnowflakes } from "./gameSnowflakes.js";
 
 /**
  * Display the available topics in the game.
