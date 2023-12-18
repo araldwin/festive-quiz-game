@@ -14,7 +14,7 @@ export function addDifficultyModal () {
       aria-hidden="true" aria-labelledby="selectDifficultyModalToggleLabel" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header mx-4">
             <h1 class="modal-title fs-5" id="selectDifficultyModalToggleLabel">Select Difficulty</h1>
             <button type="button" class="btn-close" onclick="window.location.href='index.html'"
               aria-label="Close"></button>
@@ -59,7 +59,7 @@ export function addRulesModal(buttonString) {
   <div class="modal fade" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
-        <div class="modal-header border-0">
+        <div class="modal-header border-0 ">
           <h1 class="modal-title fs-5 w-100 text-center" id="rulesModalLabel">Welcome to Santa's Quiz Adventure!</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -123,7 +123,7 @@ export function addTopicModal() {
       aria-hidden="true" aria-labelledby="selectTopicModalToggleLabel" tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header mx-4">
             <h1 class="modal-title fs-5" id="selectTopicModalToggleLabel">Select Topic</h1>
             <button type="button" class="btn-close" onclick="window.location.href='index.html'"
               aria-label="Close"></button>
