@@ -118,4 +118,3 @@ export function displayGameOverModal() {
   const gameOverModal = new bootstrap.Modal("#gameOverModal");
   gameOverModal.show();
 }
-test
