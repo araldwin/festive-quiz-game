@@ -21,3 +21,14 @@
     zIndex: 100, // Default: 9999,
     autoResize: true // Default: true
 });
+
+/**
+ * Stop the snowflakes animation.
+ */
+export function stopSnowflakes() {
+  snowflakes.stop();
+}
+
+export function destroySnowflakes() {
+  snowflakes.destroy();
+}

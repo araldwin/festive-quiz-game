@@ -2,7 +2,7 @@
 This module contains functions to display the game.
 */
 
-import { stopSnowflakes } from "./gameSnowflakes.js";
+import { destroySnowflakes, stopSnowflakes } from "./gameSnowflakes.js";
 
 /**
  * Display the available topics in the game.
@@ -170,4 +170,23 @@ export function displayGameOverModal() {
   ];
 
   gameOverModal.show();
+}
+
+
+export function stopSnowflakesByResize() {
+  let screenWidth = window.innerWidth;
+
+  // Stop the snowflakes animation on mobile devices
+  if (screenWidth < 768) {
+    stopSnowflakes();
+  }
+
+  // handle window resize and stop snowflakes animation on mobile devices
+  window.addEventListener("resize", () => {
+    screenWidth = window.innerWidth;
+    if (screenWidth < 768) {
+      stopSnowflakes();
+      destroySnowflakes();
+    }
+  });
 }

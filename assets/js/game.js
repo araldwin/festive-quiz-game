@@ -25,6 +25,7 @@ import {
   displayFireworks,
   displayWinGameModal,
   displayGameOverModal,
+  stopSnowflakesByResize,
 } from "./game-display.js";
 
 runGame();
@@ -43,6 +44,8 @@ function runGame() {
   displayProgress(getProgress());
 
   attachEventListeners();
+
+  stopSnowflakesByResize();
 }
 
 /**
