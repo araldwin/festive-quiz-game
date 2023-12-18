@@ -36,10 +36,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // ./Sound
 
 
+  // Check current page
+  // If the current page is the game page, the button closes the modal
+  // Otherwise, the button opens new difficulty modal
+  const currentPage = window.location.pathname.split("/").pop();
+  let rulesModalBtn;
+  if (currentPage === "game.html") {
+    rulesModalBtn = '<button type="button" class="btn btn-info" data-bs-dismiss="modal">Got the North Pole Gist!</button>';
+  } else {
+    rulesModalBtn = `<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#selectDifficultyModalToggle">Ho-Ho Hurry!</button>`;
+  }
+
   // Add modals to the page
+  addRulesModal(rulesModalBtn);
   addDifficultyModal();
-  addRulesModal();
   addTopicModal();
+
+  //
 
 
   // Get the difficulty buttons
