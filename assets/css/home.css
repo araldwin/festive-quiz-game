@@ -357,7 +357,8 @@ nav ul {
 
 	/* Background Image */
 	.home {
-		background: url(/assets/images/santa-background-optimized.jpg) no-repeat
-			left center/cover;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: left center;
 	}
 }
