@@ -48,12 +48,12 @@ export function displayQuestion(questionObj) {
   question.textContent = questionObj.question;
   answers.innerHTML = `
     <div class="col-12">
-      <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer1}</button>
-      <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer2}</button>
+      <button class="btn btn-outline-secondary btn-lg rounded-0 m-1 m-sm-4 answer" >${answer1}</button>
+      <button class="btn btn-outline-secondary btn-lg rounded-0 m-1 m-sm-4 answer" >${answer2}</button>
     </div>
     <div class="col-12">
-      <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer3}</button>
-      <button class="btn btn-outline-secondary btn-lg rounded-0 m-4 answer" >${answer4}</button>
+      <button class="btn btn-outline-secondary btn-lg rounded-0 m-1 m-sm-4 answer" >${answer3}</button>
+      <button class="btn btn-outline-secondary btn-lg rounded-0 m-1 m-sm-4 answer" >${answer4}</button>
     </div>
   `;
 }

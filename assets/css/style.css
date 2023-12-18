@@ -26,6 +26,7 @@ body {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     color: #1da3a3;
+    font-size: 3rem;
 }
 
 .icon-btn i:hover {
