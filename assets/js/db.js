@@ -129,7 +129,7 @@ export const DATA = [
         },
         {
             "question": "Which Christmas song was originally written for Thanksgiving?",
-            "answers": ["Jingle Bells", "Santa Claus is Coming to Town", "Rudolph the Red-Nosed Reindeer", "Winter Wonderland"],
+            "answers": ["Jingle Bells", "Santa Claus is Coming to Town", "Rudolph", "Winter Wonderland"],
             "correctAnswer": "Jingle Bells"
         },
         {
@@ -139,7 +139,7 @@ export const DATA = [
         },
         {
             "question": "Which Christmas song was the first to be broadcast from space?",
-            "answers": ["Jingle Bells", "Santa Claus is Coming to Town", "Rudolph the Red-Nosed Reindeer", "Winter Wonderland"],
+            "answers": ["Jingle Bells", "Santa Claus is Coming to Town", "Rudolph", "Winter Wonderland"],
             "correctAnswer": "Jingle Bells"
         },
         {
