@@ -88,13 +88,6 @@ No warnings - [View](testing.docs/testing-home.css.jpg)
 ### team.css
 No warnings - [View](testing.docs/testing-team.css.jpg)
 
-### index.html
-
-### game.html
-
-### team.html
-
-
 # Bug Reports
 
 ### 1. 
